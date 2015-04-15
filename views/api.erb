@@ -1,0 +1,52 @@
+<div class="content api">
+  <h1>List of Channel</h1>
+
+  <h3 class="successMessage">
+    <% if !@message.nil? %>
+      <%= @message %>
+    <% end %>
+  </h3>
+  <ul class="channels">
+      <li>
+        <form action="/api/7/get_feed" method="post">
+          <a href="/api/weather">Weather</a>
+          <button>Get Today's Feed</button>
+        </form>
+      </li>
+  </ul>
+</div>
+
+
+<script>
+  var options = {
+    url: '/api/channels',
+    dataType: 'json'
+  }
+
+  var list;
+  $.ajax(options).done(function(data){
+    list = data;
+    $.each(data, function (key, value) {
+      if(value.channel_url !== null) {
+
+        $button = $('<button>').text('Get Today\'s Feeds');
+
+        $a = $('<a>').attr({
+          'name': value.id,
+          'href': '/api/channel/'+value.id,
+          'target': '_blank'
+        }).text(value.channel_name);
+
+        $form = $('<form>').attr({
+          action: '/api/'+value.id+'/get_feed',
+          method: 'post'
+        }).append($a).append($button);
+
+        $li = $('<li>').append($form);
+
+        $('.channels').append($li);
+      }
+
+    });
+  });
+</script>

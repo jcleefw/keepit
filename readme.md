@@ -10,16 +10,27 @@ KeepIt is a feed subscription platform that displays daily topics that users are
   + 2 channel feeds (News, Yanko Design)
   + 1 Dashboard Feeds (Weather, Joke of the day)
 3. Study JSON/XML from feeds to pick up item that are needed
-4. Setup Basic Divs for app in HTML5, CSS3
+4. Use HTTParty to load JSON into database
+5. Setup Basic Divs for app in HTML5, CSS3
+6. Create Basic Explore Page
 
 
 ## Phase 2
-1. Create App Logo with Illustrator
-2. Choose a selection of default background for articles with no images.
-3.
+1. Explore page to list category available in database
+2. Create API view, and import data.
 
 ## Phase 3
-TBA
+1. Complete main task Explore page.
+  + Hide category that does not have any channel
+  + List Channel that belongs to category
+  + Style Explore page. (Optional: background)
+2. Create Slideshow
+
+## Extras
+1. Create Slideshow
+2. Create App Logo with Illustrator
+3. Choose a selection of default background for articles with no images.
+4. Create User Dashboard
 
 -------------------------------------------------------------------
 ### User Case
@@ -58,6 +69,38 @@ User select which channel they want to view in slideshow.
   + Slide show autoplay
   + Play Controller
 
+## Route ERB
+  - dashboard
+  - explore
+  - slide
+  - subscribe_channel
+  - user_settings
+
+## Class
+User
+FeedChannel
+Feed
+Category
+UserSubscription
+UserArchive
+
+## CRUD
+C - Create User, Channel Subscription, Archive feeds, Create Category
+R - View channels feed,
+U - User location woeid,
+D - Remove Archive
+
+## Web Technologies
+Front End
+  - HTML5
+  - CSS3
+  - Javascript Library: jQuery
+  - CSS Pre-processor: SASS
+  - CSS Framework : bootstrap / concise/ cardinal
+
+Backend - Ruby
+Routing Library - Sinatra
+Debugging - Web browser, Pry,
 
 
 

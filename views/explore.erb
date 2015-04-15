@@ -1,0 +1,14 @@
+<nav class="category">
+  <ul>
+    <li><a href="#">All</a></li>
+    <li><a href="#">Category</a></li>
+    <li><a href="#">Popularity</a></li>
+  </ul>
+</nav>
+<main>
+  <% @categories.each do | key, value | %>
+    <div class="channel">
+      <p><%= key.name %></p>
+    </div>
+  <% end %>
+</main>
