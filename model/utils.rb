@@ -21,15 +21,6 @@ def find_channel id
   else
     items_size = items.count
   end
-  # items.each do |item|
-  #   plus1 = (Time.parse item['pubDate']) + 1.day
-  #   # only call data_variable if item pubDate is less than 24 hours
-  #   if plus1 > Time.now
-  #     data_variable item, id
-  #   else
-  #     return false
-  #   end
-  # end
 
   # for loop to specify only to grab 10 of the latest feeds in the channel
   for i in 0..items_size
@@ -48,7 +39,7 @@ def data_variable item, id
   #["title", "link", "description", "pubDate", "guid", "category", "group"]
   title = item["title"]
   link = item["origLink"] || item['link']
-  desc = item["description"]
+  desc = item["encoded"]||item["description"]
   pubdate = Time.parse item["pubDate"]
   guid = item["guid"]
   content = { title: title, link: link, desc: desc, pubDate: pubdate, guid: guid }
@@ -68,7 +59,8 @@ def insert_data channel_id, content
 end
 
 def get_woeid
-  woeid = HTTParty.get ('https://query.yahooapis.com/v1/public/yql?q=select%20woeid%20from%20geo.places(1)%20where%20text%3D%22melbourne%2C%20australia%22&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys');
+  #binding.pry
+  woeid = HTTParty.get ("https://query.yahooapis.com/v1/public/yql?q=select%20woeid%20from%20geo.places(1)%20where%20text%3D%22#{@user.suburb.downcase}%2C%20#{@user.country.downcase}%22&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys");
 
   return woeid = (woeid['query']['results']['place']['woeid']).to_i
 end
@@ -89,8 +81,10 @@ def get_weather_data
     current = weather["condition"]["temp"]
     max = weather['forecasts'][0]['high']
     min = weather['forecasts'][0]['low']
+    summary = weather['forecasts'][0]['text']
+    forecast = weather['forecasts']
     location = weather["location"]
-    content = { location: location, current: current, max: max, min: min, woeid: woeid }
+    content = { location: location, current: current, max: max, min: min, woeid: woeid, summary: summary, forecast: forecast }
     #binding.pry
     if !rows.empty?
       rows.first.delete
@@ -102,9 +96,6 @@ def get_weather_data
 end
 
 def hello
-  "hello world"
+  "hello world blah blah blah"
 end
 
-def hello2
-  "hello world2"
-end

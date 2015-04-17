@@ -24,6 +24,10 @@ CREATE TABLE channel_feeds (
   popularity INT DEFAULT 0
 );
 
+ALTER TABLE channel_feeds
+ADD channel_image VARCHAR(250);
+
+
 INSERT INTO channel_feeds (channel_name,channel_url, channel_desc, category_id) VALUES ('Yanko Design','http://feeds.feedburner.com/yankodesign', 'Modern Industrial Design News', 4);
 INSERT INTO channel_feeds (channel_name,channel_url, channel_desc, category_id) VALUES ('ABC World News','http://www.abc.net.au/news/feed/52278/rss.xml', 'Latest news as it happens from around the world', 2);
 INSERT INTO channel_feeds (channel_name,channel_url, channel_desc, category_id) VALUES ('Angry Birds Nest','http://feeds.feedburner.com/angrybirdsnest', 'Angry Birds Walkthrough Videos, Golden Eggs, and more',1);

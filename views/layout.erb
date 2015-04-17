@@ -5,8 +5,9 @@
   <title>Keep It!</title>
   <link rel='stylesheet' href='/stylesheets/reset.css'>
   <link rel='stylesheet' href='/stylesheets/main.css'>
-  <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
   <script src='/javascripts/jquery.js'></script>
+  <script src='/javascripts/application.js'></script>
 </head>
 <body>
   <header>
@@ -20,7 +21,7 @@
     </nav>
     <div class="message">
       <div class="personal">Welcome: <%= print_user %></div>
-      <div>
+      <div class="weatherUpdate">
         <%= print_weather %>
       </div>
     </div>
@@ -29,15 +30,32 @@
   <div class="container">
     <%= yield %>
   </div>
+  <footer>
+    <h5>&copy; 2015 JC Lee. A General Assembly Project.</h5>
+  </footer>
+
+  <!-- example of underscore template
+  <script type="" id="feed-template">
+    <h1>hello {{ name }} {{age}}</h1>
+  </script>-->
+
+
+
+
+
+  <script>
+    //example of underscore template
+    /*var tpl = _.template($('#feed-template').html())
+
+  tpl({ name: 'jc', age: '234'}) // => "<h1>helo js</h>" */
+
+  $.each($('.primary li'), function() {
+    if($(this).find('a').attr('href') === window.location.pathname) {
+      $(this).siblings('.active').removeClass('active');
+      $(this).addClass('active');
+    }
+  });
+
+  </script>
 </body>
 
-<script>
-
-$.each($('.primary li'), function() {
-  if($(this).find('a').attr('href') === window.location.pathname) {
-    $(this).siblings('.active').removeClass('active');
-    $(this).addClass('active');
-  }
-});
-
-</script>

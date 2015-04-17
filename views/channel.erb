@@ -1,0 +1,28 @@
+
+
+<div class="content">
+  <h1><%= @channel.channel_name%></h1>
+</div>
+
+<% @feeds.each do |key, value| %>
+  <article>
+    <h1><%= key.content[:title] %></h1>
+    <div class="content"> <%= key.content[:desc]%></div>
+  </article>
+
+<% end %>
+
+<script>
+
+  var firstP = $('article').first().find('p').first();
+  var firstImg = $('article').first().find('p').first();
+
+  $.each($('article .content'), function() {
+    $p = $(this).first().find('p').first();
+    $img = $(this).first().find('img').first();
+
+    $(this).empty().append($p).append($img);
+    console.log($(this));
+  });
+</script>
+

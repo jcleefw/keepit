@@ -13,7 +13,7 @@ end
 # channel_feeds table
 class ChannelFeed < ActiveRecord::Base
   has_many :feeds #plural
-  has_one :category
+  belongs_to :category
 end
 
 # feeds table
@@ -23,5 +23,5 @@ class Feed < ActiveRecord::Base
 end
 
 class Category < ActiveRecord::Base
-  belongs_to :channel_feed
+  has_many :channel_feeds
 end

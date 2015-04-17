@@ -1,14 +1,70 @@
 <nav class="category">
   <ul>
-    <li><a href="#">All</a></li>
-    <li><a href="#">Category</a></li>
-    <li><a href="#">Popularity</a></li>
+    <li><a data-order='all' class="current">All</a></li>
+    <li><a data-order='category'>Category</a></li>
+    <li><a data-order='popularity'>Popularity</a></li>
   </ul>
 </nav>
 <main>
-  <% @categories.each do | key, value | %>
-    <div class="channel">
-      <p><%= key.name %></p>
-    </div>
-  <% end %>
+  <div class="channels" id="all">
+    <% @channels.each do | key | %>
+      <a href="/explore/<%= key.id %>/list">
+        <div class="channel">
+          <% if !key.channel_image.nil? && !key.channel_image.empty? %>
+            <img src="<%= key.channel_image %>" alt="">
+          <% end %>
+          <div class="channelName">
+            <p><%= key.channel_name %></p>
+          </div>
+          <div class="channelDesc">
+            <p class="title"><%= key.channel_name %></p>
+            <p><%= key.channel_desc %></p></div>
+        </div>
+      </a>
+
+    <% end %>
+  </div>
 </main>
+
+<script>
+
+$(document).ready(function (){
+  console.log("<%= hello  %>");
+  var build_all = function (channels) {
+    console.log(channels);
+    //console.log(categories);
+
+    $.each(channels, function(index, value) {
+
+    });
+  }
+  $('.category ul').on('click', 'a', function() {
+    //console.log($(this).data('order'));
+    $('.channels').hide();
+
+    if($(this).data('order') !== $('div.channels').attr('id', $(this).data('order'))) {
+      console.log("I have id");
+      $(this).attr('id', $(this).data('order'));
+    }
+    $.ajax({
+      url: '/explore/'+$(this).data('order'),
+      method: 'get',
+      data: {order: $(this).data('order')}
+    }).done(function(returnedData){
+
+      var channels = $.parseJSON(returnedData[0]);
+      if(returnedData.length > 1) {
+        var categories = $.parseJSON(returnedData[1]);
+      }
+
+      //console.log(channels);
+      build_all(channels, categories);
+    }).fail(function() {
+      console.log("operation failed");
+    });
+  });
+
+
+});
+
+</script>

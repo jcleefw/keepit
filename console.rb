@@ -7,6 +7,8 @@ require_relative 'model/config'
 require_relative 'model/class'
 require_relative 'model/utils'
 
+channel = ChannelFeed.find(1)
+
 binding.pry
 
 

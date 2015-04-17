@@ -37,16 +37,9 @@ get '/api/weather' do
 end
 
 post '/api/:id/get_feed' do
-  #params[:id]
   find_channel params[:id].to_i
-  #redirect to '/'
-  "Task In Process..."
-  redirect to '/api/import_success'
-end
-
-get '/api/import_success' do
-  @message = "Get data succeeded!"
-  erb :api
+  #"Task In Process..."
+  #redirect to '/api/import_success'
 end
 
 
