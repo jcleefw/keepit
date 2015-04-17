@@ -31,9 +31,10 @@ get '/' do
 end
 
 get '/explore' do
-  @categories = Category.all
-  @channels ||= ChannelFeed.where.not(channel_url: nil).order(:id)
+
+  @channels = ChannelFeed.where.not(channel_url: nil).order(:id)
   #binding.pry
+  @channels.to_json
   erb :explore
 end
 
@@ -41,16 +42,13 @@ get '/explore/:order' do
   #"order by category"
   content_type :json
   if params[:order] == 'all'
-    @channels = ChannelFeed.where.not(channel_url: nil).order(:id)
+    channels = ChannelFeed.where.not(channel_url: nil).order(:id)
     channels.to_json
-  else
-    categories = Category.all
-    channels = ChannelFeed.all.order(:category_id)
-
-    # data = [channels.to_json, categories.to_json]
-
-    ChannelFeed.order(:category_id).to_json(:include => :category)
-    # data.to_json
+  elsif params[:order] == 'category'
+    channels = ChannelFeed.where.not(channel_url: nil).order(:category_id).to_json(:include => :category)
+  elsif params[:order] == 'popularity'
+    channels = ChannelFeed.where.not(channel_url:nil).order(popularity: :desc)
+    channels.to_json
   end
   #binding.pry
   #erb :import_success
@@ -59,7 +57,7 @@ end
 get '/explore/:id/list' do
   @feeds = Feed.where(channel_feed_id: params[:id])
   @channel = ChannelFeed.find(params[:id])
-  #binding.pry
+  binding.pry
   erb :channel
 end
 

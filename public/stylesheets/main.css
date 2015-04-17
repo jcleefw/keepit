@@ -1327,32 +1327,32 @@
   content: "\e260";
 }
 
-/* line 15, sass/main.scss */
+/* line 18, sass/main.scss */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-/* line 20, sass/main.scss */
+/* line 23, sass/main.scss */
 body {
   color: #3D3D3D;
   font-size: 16px;
   font-family: 'Droid Sans', sans-serif;
 }
 
-/* line 25, sass/main.scss */
+/* line 28, sass/main.scss */
 ul {
   width: 100%;
   display: inline-block;
 }
 
-/* line 29, sass/main.scss */
+/* line 32, sass/main.scss */
 a {
   text-decoration: none;
 }
 
-/* line 33, sass/main.scss */
+/* line 36, sass/main.scss */
 footer {
   width: 100%;
   text-align: center;
@@ -1362,89 +1362,99 @@ footer {
 }
 
 /* Primary nav styling */
-/* line 42, sass/main.scss */
+/* line 45, sass/main.scss */
 nav.primary {
   box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 4px 2px;
 }
-/* line 44, sass/main.scss */
+/* line 47, sass/main.scss */
 nav.primary li {
   display: inline-block;
   padding: 15px;
 }
-/* line 47, sass/main.scss */
+/* line 50, sass/main.scss */
 nav.primary li a {
   color: #3D3D3D;
 }
-/* line 50, sass/main.scss */
+/* line 53, sass/main.scss */
 nav.primary li:hover {
   background-color: #32a900;
 }
-/* line 52, sass/main.scss */
+/* line 55, sass/main.scss */
 nav.primary li:hover a {
   color: white;
 }
-/* line 57, sass/main.scss */
+/* line 60, sass/main.scss */
 nav.primary li.active {
   background-color: #3AC200;
 }
-/* line 60, sass/main.scss */
+/* line 63, sass/main.scss */
 nav.primary li.active a {
   color: white;
 }
 
 /* User Standard Message */
-/* line 67, sass/main.scss */
+/* line 70, sass/main.scss */
 .message {
   margin: 30px 10px;
   height: 50px;
 }
 
-/* line 72, sass/main.scss */
+/* line 75, sass/main.scss */
 .weatherUpdate {
   margin-top: 10px;
 }
 
-/* line 75, sass/main.scss */
+/* line 78, sass/main.scss */
 span.weather {
   padding-right: 20px;
 }
-/* line 78, sass/main.scss */
+/* line 81, sass/main.scss */
 span.weather em {
   font-size: 2em;
   font-style: normal;
   color: #3AC200;
   font-weight: bold;
 }
-/* line 84, sass/main.scss */
+/* line 87, sass/main.scss */
 span.weather b {
   font-size: .8em;
   padding-left: 3px;
 }
 
-/* line 90, sass/main.scss */
+/* line 93, sass/main.scss */
 .container {
   position: relative;
 }
 
-/* line 94, sass/main.scss */
+/* line 97, sass/main.scss */
 nav.category {
   width: 100%;
   background-color: #3D3D3D;
   text-align: center;
   padding: 15px;
 }
-/* line 99, sass/main.scss */
+/* line 102, sass/main.scss */
 nav.category li {
   display: inline-block;
   padding: 0 15px;
 }
-/* line 102, sass/main.scss */
+/* line 105, sass/main.scss */
 nav.category li a {
   color: white;
   cursor: pointer;
 }
 
-/* line 109, sass/main.scss */
+/* line 112, sass/main.scss */
+.channels h3 {
+  background-color: #3AC200;
+  padding: 10px;
+  margin-top: 20px;
+  text-align: center;
+  padding: 10px;
+  color: white;
+}
+
+/* line 122, sass/main.scss */
 .channel {
   display: block;
   width: 100%;
@@ -1458,35 +1468,35 @@ nav.category li a {
   cursor: pointer;
   overflow-y: hidden;
 }
-/* line 121, sass/main.scss */
+/* line 134, sass/main.scss */
 .channel div {
   height: inherit;
   width: 100%;
 }
-/* line 126, sass/main.scss */
+/* line 139, sass/main.scss */
 .channel:hover > .channelDesc {
   top: 70%;
   transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
   background-color: #c0bdbf;
 }
-/* line 131, sass/main.scss */
+/* line 144, sass/main.scss */
 .channel img {
   height: 200px;
   width: 100%;
 }
 
-/* line 137, sass/main.scss */
+/* line 150, sass/main.scss */
 .channelName p {
   position: relative;
   top: 50%;
 }
 
-/* line 142, sass/main.scss */
+/* line 155, sass/main.scss */
 .channelDesc {
   position: absolute;
   top: 200px;
 }
-/* line 145, sass/main.scss */
+/* line 158, sass/main.scss */
 .channelDesc:after {
   content: '';
   width: 100%;
@@ -1497,14 +1507,14 @@ nav.category li a {
   left: 0;
   top: -11px;
 }
-/* line 158, sass/main.scss */
+/* line 168, sass/main.scss */
 .channelDesc p {
   padding: 0 15px;
   color: #3D3D3D;
   text-align: left;
   font-size: 0.8em;
 }
-/* line 165, sass/main.scss */
+/* line 175, sass/main.scss */
 .channelDesc .title {
   text-transform: uppercase;
   padding: 5px 15px;
@@ -1513,30 +1523,45 @@ nav.category li a {
   font-size: 1em;
 }
 
-/* line 174, sass/main.scss */
+/* line 184, sass/main.scss */
 .content h1, .content ul {
   padding: 0 50px;
 }
-/* line 177, sass/main.scss */
+/* line 187, sass/main.scss */
 .content h1 {
   background-color: #3D3D3D;
   color: white;
   padding: 10px;
 }
 
+/* Feed article styling */
+/* line 195, sass/main.scss */
+article {
+  padding: 15px;
+  border: 1px solid #c0bdbf;
+}
+/* line 197, sass/main.scss */
+article * {
+  padding: 10px 0;
+}
+/* line 200, sass/main.scss */
+article img {
+  width: 100%;
+}
+
 /* API Styling */
-/* line 185, sass/main.scss */
+/* line 210, sass/main.scss */
 .api li {
   padding: 30px;
   list-style: none;
   border-bottom: 1px solid #bdbdbd;
 }
-/* line 189, sass/main.scss */
+/* line 214, sass/main.scss */
 .api li a {
   display: inline-block;
   width: 70%;
 }
-/* line 193, sass/main.scss */
+/* line 218, sass/main.scss */
 .api li button {
   padding: 10px;
   border: none;
@@ -1545,14 +1570,43 @@ nav.category li a {
   font-size: 1em;
 }
 
-/* line 203, sass/main.scss */
+/* line 228, sass/main.scss */
 .successMessage {
   padding: 10px 50px;
   background-color: #3AC200;
   color: white;
 }
 
-/* line 209, sass/main.scss */
+/* line 234, sass/main.scss */
 .btnProcess {
   opacity: 0.5;
+}
+
+@media screen and (min-width: 600px) and (max-width: 991px) {
+  /* line 239, sass/main.scss */
+  .channels {
+    text-align: center;
+  }
+
+  /* line 243, sass/main.scss */
+  .channel {
+    width: 50%;
+    display: inline-block;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  /* line 252, sass/main.scss */
+  .channel {
+    width: 33%;
+    display: inline-block;
+    border: 1px solid #cccacc;
+    overflow-x: hidden;
+  }
+
+  /* line 259, sass/main.scss */
+  .channels h3 {
+    font-size: 1.3em;
+    padding: 10px;
+    margin-top: 20px;
+  }
 }

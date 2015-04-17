@@ -21,19 +21,18 @@ CREATE TABLE channel_feeds (
   channel_url VARCHAR(250) NULL,
   category_id VARCHAR(45) NULL,
   channel_desc TEXT,
+  channel_image VARCHAR(250) NULL,
   popularity INT DEFAULT 0
 );
 
-ALTER TABLE channel_feeds
-ADD channel_image VARCHAR(250);
 
+INSERT INTO channel_feeds (channel_name, channel_url, category_id, channel_desc, popularity, channel_image) VALUES ('Yanko Design','http://feeds.feedburner.com/yankodesign', 4, 'Modern Industrial Design News', 0, '/images/yankodesign-logo.jpg');
+INSERT INTO channel_feeds (channel_name, channel_url, category_id, channel_desc, popularity, channel_image) VALUES ('ABC World News','http://www.abc.net.au/news/feed/52278/rss.xml', 2, 'Latest news as it happens from around the world',10, '/images/abcnewsdefault_90.jpg');
 
-INSERT INTO channel_feeds (channel_name,channel_url, channel_desc, category_id) VALUES ('Yanko Design','http://feeds.feedburner.com/yankodesign', 'Modern Industrial Design News', 4);
-INSERT INTO channel_feeds (channel_name,channel_url, channel_desc, category_id) VALUES ('ABC World News','http://www.abc.net.au/news/feed/52278/rss.xml', 'Latest news as it happens from around the world', 2);
-INSERT INTO channel_feeds (channel_name,channel_url, channel_desc, category_id) VALUES ('Angry Birds Nest','http://feeds.feedburner.com/angrybirdsnest', 'Angry Birds Walkthrough Videos, Golden Eggs, and more',1);
-INSERT INTO channel_feeds (channel_name,channel_url, channel_desc, category_id) VALUES ('Digg Daily Top Stories','http://digg.com/rss/top.rss', 'Digg - What the Internet is talking about right now', 2);
-INSERT INTO channel_feeds (channel_name,channel_url, channel_desc, category_id) VALUES ('Ikea Hackers','http://feeds.feedburner.com/Ikeahacker', 'Clever ideas and hacks for your IKEA', 5);
-INSERT INTO channel_feeds (channel_name,channel_url, channel_desc, category_id) VALUES ('Smashing Magazines','http://www.smashingmagazine.com/feed/', 'For Professional Web Designers and Developers', 6);
+INSERT INTO channel_feeds (channel_name, channel_url, category_id, channel_desc, popularity, channel_image) VALUES ('Angry Birds Nest','http://feeds.feedburner.com/angrybirdsnest', 1, 'Angry Birds Walkthrough Videos, Golden Eggs, and more', 0, '/images/Angry_birds_listorylove_resize.png');
+INSERT INTO channel_feeds (channel_name, channel_url, category_id, channel_desc, popularity, channel_image) VALUES ('Digg Daily Top Stories','http://digg.com/rss/top.rss', 2, 'Digg - What the Internet is talking about right now', 3, '/images/Digg_Logo.png');
+INSERT INTO channel_feeds (channel_name, channel_url, category_id, channel_desc, popularity, channel_image) VALUES ('Ikea Hackers','http://feeds.feedburner.com/Ikeahacker', 5, 'Clever ideas and hacks for your IKEA', 9, '/images/ikean-hack-logo.png');
+INSERT INTO channel_feeds (channel_name, channel_url, category_id, channel_desc, popularity, channel_image) VALUES ('Smashing Magazines','http://www.smashingmagazine.com/feed/', 6, 'For Professional Web Designers and Developers', 15, '/images/smashing_magazine_logo5.jpg');
 INSERT INTO channel_feeds (channel_name, channel_desc) VALUES ('Yahoo Weather Forecast', 'Weather forecast provided by yahoo');
 
 CREATE TABLE feeds (

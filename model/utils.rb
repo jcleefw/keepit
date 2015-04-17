@@ -1,5 +1,5 @@
 require 'httparty'
-require 'pry'
+#require 'pry'
 require 'weather-api'
 
 require_relative 'class'

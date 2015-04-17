@@ -1,3 +1,9 @@
 source 'https://rubygems.org'
 
 gem 'sinatra'
+gem 'sinatra'
+gem 'activerecord'
+gem 'bcrypt'
+gem 'pg'
+gem 'weather-api'
+gem 'httparty'

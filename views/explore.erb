@@ -6,23 +6,7 @@
   </ul>
 </nav>
 <main>
-  <div class="channels" id="all">
-    <% @channels.each do | key | %>
-      <a href="/explore/<%= key.id %>/list">
-        <div class="channel">
-          <% if !key.channel_image.nil? && !key.channel_image.empty? %>
-            <img src="<%= key.channel_image %>" alt="">
-          <% end %>
-          <div class="channelName">
-            <p><%= key.channel_name %></p>
-          </div>
-          <div class="channelDesc">
-            <p class="title"><%= key.channel_name %></p>
-            <p><%= key.channel_desc %></p></div>
-        </div>
-      </a>
-
-    <% end %>
+  <div class="channels">
   </div>
 </main>
 
@@ -30,38 +14,82 @@
 
 $(document).ready(function (){
   console.log("<%= hello  %>");
-  var build_all = function (channels) {
-    console.log(channels);
-    //console.log(categories);
+  var build_feed = function (value) {
+    $a = $('<a>').attr('href', '/explore/'+value.id+'/list');
+    if(value.channel_image !== null && value.channel_image !== "") {
+        $img = $('<img>').attr('src', value.channel_image);
+        $img = $('<div>').addClass('channelImage').append($img);
+    }
+    $pTitle = $('<p>').addClass('title').html(value.channel_name);
+    $pDesc = $('<p>').html(value.channel_desc);
+    $channelDesc = $('<div>').addClass('channelDesc').append($pTitle, $pDesc);
 
-    $.each(channels, function(index, value) {
+    $channelName = $('<div>').addClass('channelName').append($('<p>').html(value.channel_name));
+    $channel = $('<div>').addClass('channel').append($img, $channelName, $channelDesc);
+    $wrap = $a.append($channel);
 
+    $('.channels').append($wrap);
+  };
+  var build_all = function (data) {
+    //console.log("build feed");
+    $('.channels').empty();
+    $.each(data, function(index, value) {
+      build_feed(value);
+    });
+  };
+
+  var build_category = function (data) {
+    console.log("build category");
+    $('.channels').empty();
+    var currentCat = 'hello';
+    $.each(data, function(index, value) {
+      if(currentCat !== value.category.name) {
+        currentCat = value.category.name;
+        $catName = $('<h3>').html(value.category.name);
+        $('.channels').append($catName);
+      }
+
+      build_feed(value);
+    });
+
+  };
+
+  var ajaxCall = function(order){
+    console.log("ajaxCall");
+    $.ajax({
+      url: '/explore/'+order,
+      method: 'get',
+      data: {order: order},
+      dataType: 'json'
+    }).done(function(returnedData){
+      console.log(order);
+      if((order === 'all') || order === 'popularity') {
+        build_all(returnedData);
+      } else if (order === 'category') {
+        build_category(returnedData);
+
+      } else {
+        console.log('later');
+      }
+    }).fail(function() {
+      console.log("operation failed");
     });
   }
+
+  //build_all($.parseJSON(<%= @channels %>));
+
+  // make ajax call to list all one page load
+  ajaxCall('all');
+
   $('.category ul').on('click', 'a', function() {
     //console.log($(this).data('order'));
-    $('.channels').hide();
+    //$('.channels').hide();
 
     if($(this).data('order') !== $('div.channels').attr('id', $(this).data('order'))) {
       console.log("I have id");
       $(this).attr('id', $(this).data('order'));
     }
-    $.ajax({
-      url: '/explore/'+$(this).data('order'),
-      method: 'get',
-      data: {order: $(this).data('order')}
-    }).done(function(returnedData){
-
-      var channels = $.parseJSON(returnedData[0]);
-      if(returnedData.length > 1) {
-        var categories = $.parseJSON(returnedData[1]);
-      }
-
-      //console.log(channels);
-      build_all(channels, categories);
-    }).fail(function() {
-      console.log("operation failed");
-    });
+    ajaxCall($(this).data('order'));
   });
 
 
