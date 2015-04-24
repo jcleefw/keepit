@@ -24,7 +24,7 @@ KeepIt is a feed subscription platform that displays daily topics that users are
   + Hide category that does not have any channel
   + List Channel that belongs to category
   + Style Explore page. (Optional: background)
-2. Create Slideshow
+
 
 ## Extras
 1. Create Slideshow

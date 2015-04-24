@@ -57,7 +57,7 @@ end
 get '/explore/:id/list' do
   @feeds = Feed.where(channel_feed_id: params[:id])
   @channel = ChannelFeed.find(params[:id])
-  binding.pry
+  #binding.pry
   erb :channel
 end
 

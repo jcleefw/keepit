@@ -5,13 +5,15 @@ require 'weather-api'
 require_relative 'class'
 
 def find_channel id
-  #binding.pry
-  channel = ChannelFeed.find(id).channel_url
-  @data = HTTParty.get(channel)
 
-  if @data.slice(0..10).include? 'xml'
-    @data = JSON.parse(Hash.from_xml(@data).to_json)
-  end
+  channel = ChannelFeed.find(id)
+  @data = JSON.parse channel.raw_feed.data
+
+  #@data = HTTParty.get(channel.channel_url)
+
+  # if @data.slice(0..10).include? 'xml'
+  #   @data = JSON.parse(Hash.from_xml(@data).to_json)
+  # end
 
   items = @data['rss']['channel']['item']
   items_size = items.count
@@ -25,7 +27,7 @@ def find_channel id
   # for loop to specify only to grab 10 of the latest feeds in the channel
   for i in 0..items_size
     #binding.pry
-    plus1 = (Time.parse items[i]['pubDate']) + 1.day
+    plus1 = (Time.parse items[i]['pubDate']) + 5.day
 
     if plus1 > Time.now
       data_variable items[i], id
@@ -36,24 +38,23 @@ def find_channel id
 end
 
 def data_variable item, id
-  #["title", "link", "description", "pubDate", "guid", "category", "group"]
-  title = item["title"]
-  link = item["origLink"] || item['link']
-  desc = item["encoded"]||item["description"]
-  pubdate = Time.parse item["pubDate"]
-  guid = item["guid"]
-  content = { title: title, link: link, desc: desc, pubDate: pubdate, guid: guid }
+
+  feed_variable = FeedVariable.find_by(channel_feed_id: id).variable
+  content ={}
+  feed_variable.each do |variable|
+    content[variable.to_sym] = item[variable]
+  end
 
   insert_data id,content
 end
 
 
 def insert_data channel_id, content
-
   feed = Feed.create
   feed.channel_feed_id = channel_id
   feed.content = content
   feed.save
+  ChannelFeed.find(channel_id).imported = true
 
   return feed
 end
@@ -95,7 +96,17 @@ def get_weather_data
   end
 end
 
+def time_to_import? current_time, previous_time, duration
+
+  if (previous_time + duration) >= current_time
+    false
+  else
+    true
+  end
+end
+
 def hello
   "hello world blah blah blah"
 end
+
 

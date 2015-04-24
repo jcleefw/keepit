@@ -61,3 +61,40 @@ id = 6
 ```
 
 
+# Channel_Feed Img & description link
+digg daily top stories
+  no image src
+
+### yanko design
+img src
+  @items[0]["encoded"] - 2nd image
+description
+  @items[0]["encoded"] - first paragraph
+
+### abc world news
+image src
+  @items[1]["group"]["content"][0]["url"]
+Description
+  @items[0]["description"]
+
+###ikea hackers
+img src
+  @items[0]["encoded"]  - first image
+Description
+  @items[0]["description"]
+
+
+### angry bird nest
+image src
+  @items[0]["enclosure"]["url"]
+Description
+  @items[0]["description"]
+  - handle it cannot be video. get the text. dont pick the first paragraph
+
+### smashing magazine
+img src
+  @items[0]["description"] - figure
+description
+  @items[0]["description"] - first paragraph
+
+

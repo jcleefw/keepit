@@ -23,8 +23,11 @@ CREATE TABLE channel_feeds (
   channel_desc TEXT,
   channel_image VARCHAR(250) NULL,
   popularity INT DEFAULT 0
+  imported BOOLEAN DEFAULT 0
 );
 
+ALTER TABLE channel_feeds
+ADD imported BOOLEAN DEFAULT 0;
 
 INSERT INTO channel_feeds (channel_name, channel_url, category_id, channel_desc, popularity, channel_image) VALUES ('Yanko Design','http://feeds.feedburner.com/yankodesign', 4, 'Modern Industrial Design News', 0, '/images/yankodesign-logo.jpg');
 INSERT INTO channel_feeds (channel_name, channel_url, category_id, channel_desc, popularity, channel_image) VALUES ('ABC World News','http://www.abc.net.au/news/feed/52278/rss.xml', 2, 'Latest news as it happens from around the world',10, '/images/abcnewsdefault_90.jpg');
@@ -68,3 +71,16 @@ UPDATE FROM channel_feeds
 TRUNCATE TABLE feeds RESTART IDENTITY
 
 SELECT * FROM feeds WHERE channel_feed_id = 7 AND content[:woeid] = 1103816;
+
+CREATE TABLE raw_feeds (
+  id SERIAL4 PRIMARY KEY,
+  channel_feed_id SERIAL4,
+  date_created timestamptz DEFAULT NOW(),
+  data text
+);
+
+CREATE TABLE feed_variables (
+  id SERIAL4 PRIMARY KEY,
+  channel_feed_id SERIAL4,
+  variable VARCHAR(250)
+);

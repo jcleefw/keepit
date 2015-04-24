@@ -8,9 +8,10 @@ require_relative 'model/class'
 require_relative 'model/utils'
 
 channel = ChannelFeed.find(1)
+raw_feed = RawFeed.where(channel_feed_id: 1)
+
 
 binding.pry
-
 
 
 

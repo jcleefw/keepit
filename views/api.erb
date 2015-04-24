@@ -12,8 +12,8 @@
 <script>
   $(document).ready(function() {
     generate_channel_list();
-
-    $('ul.channels').on('click', 'button', function() {
+    console.log(<%= @imported %>)
+    $('ul.channels').on('click', 'button.raw', function() {
       $(this).prop('disabled', true).html('Processing...').addClass('btnProcess')
       id = $(this).data('channel-id');
       //console.log('/api/'+id+'/posts');

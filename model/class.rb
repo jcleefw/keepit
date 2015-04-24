@@ -13,6 +13,8 @@ end
 # channel_feeds table
 class ChannelFeed < ActiveRecord::Base
   has_many :feeds #plural
+  has_one :feed_variable
+  has_one :raw_feed
   belongs_to :category
 end
 
@@ -24,4 +26,14 @@ end
 
 class Category < ActiveRecord::Base
   has_many :channel_feeds
+end
+
+class RawFeed < ActiveRecord::Base
+  serialize :data
+  belongs_to :channel_feed
+end
+
+class FeedVariable < ActiveRecord::Base
+  serialize :variable
+  belongs_to :channel_feed
 end

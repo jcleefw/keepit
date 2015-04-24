@@ -19,6 +19,7 @@ $screen-medium: 768px;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  transition: all 0.5s ease;
 }
 body {
   color: $dark-grey;
@@ -92,6 +93,8 @@ span.weather{
 
 .container{
   position: relative;
+  display: inline-block;
+  width: 100%;
 }
 
 nav.category {
@@ -207,20 +210,76 @@ article {
 
 /* API Styling */
 .api {
+  padding: 30px;
   li{
-    padding: 30px;
+    padding: 30px 0;
     list-style: none;
     border-bottom: 1px solid lighten($dark-grey, 50%);
+    text-align: left;
     a {
       display:inline-block;
       width: 70%;
+      text-align: left;
     }
-    button {
-      padding: 10px;
-      border:none;
-      background-color: $purple;
-      color: white;
-      font-size: 1em;
+  }
+  button {
+    padding: 10px;
+    border:none;
+    background-color: $purple;
+    color: white;
+    font-size: 1em;
+
+    &:focus {
+      box-shadow:none;
+    }
+  }
+  h1 {
+    margin-bottom: 30px;
+  }
+  p {
+    padding: 5px 0;
+  }
+  label {
+    color: $green;
+  }
+  h5 {
+    color: $purple;
+  }
+
+  .channelInfo {
+    border: 1px dashed purple;
+    padding: 20px;
+    font-size: 0.8em;
+  }
+
+  .channelItem {
+    margin-top:30px;
+  }
+
+  .item{
+    border: 1px dashed purple;
+    padding: 20px;
+    margin: 10px;
+  }
+}
+
+#variables {
+  padding:20px 0;
+  .variable {
+    display:inline-block;
+    padding: 20px;
+    border: 1px solid $purple;
+    margin-top: 20px;
+    cursor:pointer;
+    text-align: center;
+
+    span {
+      font-size: .7em;
+      color: $light-grey;
+      display: none;
+    }
+    span.show {
+      display:block;
     }
   }
 }
@@ -246,6 +305,13 @@ article {
     //border: 1px solid rgba($purple, .3);
     //box-shadow: 1px 1px 1px 5px rgba(0,0,0,.3);
   }
+  .message {
+    padding: 0 30px;
+  }
+
+  .api h1 {
+    padding: 10px 30px;
+  }
 }
 
 @media screen and (min-width: $screen-large) and (max-width: $screen-xlarge - 1px) {
@@ -260,5 +326,21 @@ article {
     font-size: 1.3em;
     padding: 10px;
     margin-top: 20px;
+  }
+
+  article{
+    width: 49.5%;
+    display: block;
+    vertical-align: top;
+    float:left;
+    background-color:white;
+  }
+
+  .message {
+    padding: 0 30px;
+  }
+
+  .api h1 {
+    padding: 10px 30px;
   }
 }

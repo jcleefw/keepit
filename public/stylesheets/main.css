@@ -1332,27 +1332,28 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  transition: all 0.5s ease;
 }
 
-/* line 23, sass/main.scss */
+/* line 24, sass/main.scss */
 body {
   color: #3D3D3D;
   font-size: 16px;
   font-family: 'Droid Sans', sans-serif;
 }
 
-/* line 28, sass/main.scss */
+/* line 29, sass/main.scss */
 ul {
   width: 100%;
   display: inline-block;
 }
 
-/* line 32, sass/main.scss */
+/* line 33, sass/main.scss */
 a {
   text-decoration: none;
 }
 
-/* line 36, sass/main.scss */
+/* line 37, sass/main.scss */
 footer {
   width: 100%;
   text-align: center;
@@ -1362,89 +1363,91 @@ footer {
 }
 
 /* Primary nav styling */
-/* line 45, sass/main.scss */
+/* line 46, sass/main.scss */
 nav.primary {
   box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 4px 2px;
 }
-/* line 47, sass/main.scss */
+/* line 48, sass/main.scss */
 nav.primary li {
   display: inline-block;
   padding: 15px;
 }
-/* line 50, sass/main.scss */
+/* line 51, sass/main.scss */
 nav.primary li a {
   color: #3D3D3D;
 }
-/* line 53, sass/main.scss */
+/* line 54, sass/main.scss */
 nav.primary li:hover {
   background-color: #32a900;
 }
-/* line 55, sass/main.scss */
+/* line 56, sass/main.scss */
 nav.primary li:hover a {
   color: white;
 }
-/* line 60, sass/main.scss */
+/* line 61, sass/main.scss */
 nav.primary li.active {
   background-color: #3AC200;
 }
-/* line 63, sass/main.scss */
+/* line 64, sass/main.scss */
 nav.primary li.active a {
   color: white;
 }
 
 /* User Standard Message */
-/* line 70, sass/main.scss */
+/* line 71, sass/main.scss */
 .message {
   margin: 30px 10px;
   height: 50px;
 }
 
-/* line 75, sass/main.scss */
+/* line 76, sass/main.scss */
 .weatherUpdate {
   margin-top: 10px;
 }
 
-/* line 78, sass/main.scss */
+/* line 79, sass/main.scss */
 span.weather {
   padding-right: 20px;
 }
-/* line 81, sass/main.scss */
+/* line 82, sass/main.scss */
 span.weather em {
   font-size: 2em;
   font-style: normal;
   color: #3AC200;
   font-weight: bold;
 }
-/* line 87, sass/main.scss */
+/* line 88, sass/main.scss */
 span.weather b {
   font-size: .8em;
   padding-left: 3px;
 }
 
-/* line 93, sass/main.scss */
+/* line 94, sass/main.scss */
 .container {
   position: relative;
+  display: inline-block;
+  width: 100%;
 }
 
-/* line 97, sass/main.scss */
+/* line 100, sass/main.scss */
 nav.category {
   width: 100%;
   background-color: #3D3D3D;
   text-align: center;
   padding: 15px;
 }
-/* line 102, sass/main.scss */
+/* line 105, sass/main.scss */
 nav.category li {
   display: inline-block;
   padding: 0 15px;
 }
-/* line 105, sass/main.scss */
+/* line 108, sass/main.scss */
 nav.category li a {
   color: white;
   cursor: pointer;
 }
 
-/* line 112, sass/main.scss */
+/* line 115, sass/main.scss */
 .channels h3 {
   background-color: #3AC200;
   padding: 10px;
@@ -1454,7 +1457,7 @@ nav.category li a {
   color: white;
 }
 
-/* line 122, sass/main.scss */
+/* line 125, sass/main.scss */
 .channel {
   display: block;
   width: 100%;
@@ -1468,35 +1471,35 @@ nav.category li a {
   cursor: pointer;
   overflow-y: hidden;
 }
-/* line 134, sass/main.scss */
+/* line 137, sass/main.scss */
 .channel div {
   height: inherit;
   width: 100%;
 }
-/* line 139, sass/main.scss */
+/* line 142, sass/main.scss */
 .channel:hover > .channelDesc {
   top: 70%;
   transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
   background-color: #c0bdbf;
 }
-/* line 144, sass/main.scss */
+/* line 147, sass/main.scss */
 .channel img {
   height: 200px;
   width: 100%;
 }
 
-/* line 150, sass/main.scss */
+/* line 153, sass/main.scss */
 .channelName p {
   position: relative;
   top: 50%;
 }
 
-/* line 155, sass/main.scss */
+/* line 158, sass/main.scss */
 .channelDesc {
   position: absolute;
   top: 200px;
 }
-/* line 158, sass/main.scss */
+/* line 161, sass/main.scss */
 .channelDesc:after {
   content: '';
   width: 100%;
@@ -1507,14 +1510,14 @@ nav.category li a {
   left: 0;
   top: -11px;
 }
-/* line 168, sass/main.scss */
+/* line 171, sass/main.scss */
 .channelDesc p {
   padding: 0 15px;
   color: #3D3D3D;
   text-align: left;
   font-size: 0.8em;
 }
-/* line 175, sass/main.scss */
+/* line 178, sass/main.scss */
 .channelDesc .title {
   text-transform: uppercase;
   padding: 5px 15px;
@@ -1523,11 +1526,11 @@ nav.category li a {
   font-size: 1em;
 }
 
-/* line 184, sass/main.scss */
+/* line 187, sass/main.scss */
 .content h1, .content ul {
   padding: 0 50px;
 }
-/* line 187, sass/main.scss */
+/* line 190, sass/main.scss */
 .content h1 {
   background-color: #3D3D3D;
   color: white;
@@ -1535,67 +1538,143 @@ nav.category li a {
 }
 
 /* Feed article styling */
-/* line 195, sass/main.scss */
+/* line 198, sass/main.scss */
 article {
   padding: 15px;
   border: 1px solid #c0bdbf;
 }
-/* line 197, sass/main.scss */
+/* line 200, sass/main.scss */
 article * {
   padding: 10px 0;
 }
-/* line 200, sass/main.scss */
+/* line 203, sass/main.scss */
 article img {
   width: 100%;
 }
 
 /* API Styling */
-/* line 210, sass/main.scss */
-.api li {
+/* line 212, sass/main.scss */
+.api {
   padding: 30px;
-  list-style: none;
-  border-bottom: 1px solid #bdbdbd;
 }
 /* line 214, sass/main.scss */
+.api li {
+  padding: 30px 0;
+  list-style: none;
+  border-bottom: 1px solid #bdbdbd;
+  text-align: left;
+}
+/* line 219, sass/main.scss */
 .api li a {
   display: inline-block;
   width: 70%;
+  text-align: left;
 }
-/* line 218, sass/main.scss */
-.api li button {
+/* line 225, sass/main.scss */
+.api button {
   padding: 10px;
   border: none;
   background-color: #7C64A2;
   color: white;
   font-size: 1em;
 }
+/* line 232, sass/main.scss */
+.api button:focus {
+  box-shadow: none;
+}
+/* line 236, sass/main.scss */
+.api h1 {
+  margin-bottom: 30px;
+}
+/* line 239, sass/main.scss */
+.api p {
+  padding: 5px 0;
+}
+/* line 242, sass/main.scss */
+.api label {
+  color: #3AC200;
+}
+/* line 245, sass/main.scss */
+.api h5 {
+  color: #7C64A2;
+}
+/* line 249, sass/main.scss */
+.api .channelInfo {
+  border: 1px dashed purple;
+  padding: 20px;
+  font-size: 0.8em;
+}
+/* line 255, sass/main.scss */
+.api .channelItem {
+  margin-top: 30px;
+}
+/* line 259, sass/main.scss */
+.api .item {
+  border: 1px dashed purple;
+  padding: 20px;
+  margin: 10px;
+}
 
-/* line 228, sass/main.scss */
+/* line 266, sass/main.scss */
+#variables {
+  padding: 20px 0;
+}
+/* line 268, sass/main.scss */
+#variables .variable {
+  display: inline-block;
+  padding: 20px;
+  border: 1px solid #7C64A2;
+  margin-top: 20px;
+  cursor: pointer;
+  text-align: center;
+}
+/* line 276, sass/main.scss */
+#variables .variable span {
+  font-size: .7em;
+  color: #c0bdbf;
+  display: none;
+}
+/* line 281, sass/main.scss */
+#variables .variable span.show {
+  display: block;
+}
+
+/* line 287, sass/main.scss */
 .successMessage {
   padding: 10px 50px;
   background-color: #3AC200;
   color: white;
 }
 
-/* line 234, sass/main.scss */
+/* line 293, sass/main.scss */
 .btnProcess {
   opacity: 0.5;
 }
 
 @media screen and (min-width: 600px) and (max-width: 991px) {
-  /* line 239, sass/main.scss */
+  /* line 298, sass/main.scss */
   .channels {
     text-align: center;
   }
 
-  /* line 243, sass/main.scss */
+  /* line 302, sass/main.scss */
   .channel {
     width: 50%;
     display: inline-block;
   }
+
+  /* line 308, sass/main.scss */
+  .message {
+    padding: 0 30px;
+  }
+
+  /* line 312, sass/main.scss */
+  .api h1 {
+    padding: 10px 30px;
+  }
 }
 @media screen and (min-width: 992px) and (max-width: 1199px) {
-  /* line 252, sass/main.scss */
+  /* line 318, sass/main.scss */
   .channel {
     width: 33%;
     display: inline-block;
@@ -1603,10 +1682,29 @@ article img {
     overflow-x: hidden;
   }
 
-  /* line 259, sass/main.scss */
+  /* line 325, sass/main.scss */
   .channels h3 {
     font-size: 1.3em;
     padding: 10px;
     margin-top: 20px;
+  }
+
+  /* line 331, sass/main.scss */
+  article {
+    width: 49.5%;
+    display: block;
+    vertical-align: top;
+    float: left;
+    background-color: white;
+  }
+
+  /* line 339, sass/main.scss */
+  .message {
+    padding: 0 30px;
+  }
+
+  /* line 343, sass/main.scss */
+  .api h1 {
+    padding: 10px 30px;
   }
 }

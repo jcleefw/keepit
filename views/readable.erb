@@ -1,0 +1,43 @@
+<div class="content api">
+  <h1>Producing readable</h1>
+  <ul >
+    <button>Click to Show Channel Info</button>
+
+    <div class="channelInfo">
+    <% @data.each do |key, info| %>
+      <% if key != 'item'%>
+        <p><label><%= key %></label> : <%= info %></p>
+      <% end %>
+    <% end %>
+    </div>
+
+    <div class="channelItem">
+    <h5>Channel Item</h5>
+      <p>Item Size = <%= @itemSize %></p>
+
+        <select name="items" id="items">
+          <option value="">Select to show item info</option>
+        </select>
+      <% (0..2).each do | n | %>
+        <div class="item">
+          <% @items[n].each do |data_key, data_info| %>
+            <p><label><%= data_key %></label> : <%= data_info %></p>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </ul>
+</div>
+<script>
+$(document).ready(function() {
+  $('.channelInfo').hide();
+  $('button').on('click', function() {
+    $('.channelInfo').toggle();
+  });
+
+  $('#items').on('change', function() {
+    console.log( this.value + " option is selected.");
+
+  });
+});
+</script>
