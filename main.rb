@@ -27,6 +27,8 @@ end
 
 
 get '/' do
+  @feeds = Feed.where(channel_feed_id: 1).order(date_created: :desc).take(1)
+  @channel = ChannelFeed.find(1)
   erb :index
 end
 
@@ -55,11 +57,16 @@ get '/explore/:order' do
 end
 
 get '/explore/:id/list' do
-  @feeds = Feed.where(channel_feed_id: params[:id])
+  @feeds = Feed.where(channel_feed_id: params[:id]).order(date_created: :desc).take(10)
   @channel = ChannelFeed.find(params[:id])
   #binding.pry
   erb :channel
 end
+
+get '/slide' do
+
+end
+
 
 
 

@@ -27,6 +27,7 @@
         console.log(this);
         //console.log();
       }).fail(function() { // this will display if it fails
+        $(this).html('Failed')
         console.log("Fail to import data.");
       });
     });

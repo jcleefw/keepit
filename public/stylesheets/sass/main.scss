@@ -1,6 +1,7 @@
 //@import 'bootstrap/variables';
 //@import "bootstrap/mixins";
 @import 'bootstrap/glyphicons';
+@import 'magnific-popup';
 
 
 $green: #3AC200;
@@ -195,7 +196,7 @@ nav.category {
 }
 
 /* Feed article styling */
-article {
+.channelList article {
   padding: 15px;
   * {
     padding: 10px 0;
@@ -203,10 +204,17 @@ article {
   img{
     width: 100%;
   }
+  h1{
+    background-color: white;
+    color: $dark-grey;
+  }
   border: 1px solid $light-grey;
-
 }
 
+/* Slides article styling */
+.slides{
+  background-color: red;
+}
 
 /* API Styling */
 .api {
@@ -293,6 +301,9 @@ article {
 .btnProcess {
   opacity: 0.5;
 }
+.fs-img{
+  width: 100%;
+}
 
 @media screen and (min-width: 600px) and (max-width: $screen-large - 1px) {
   .channels {
@@ -315,20 +326,9 @@ article {
 }
 
 @media screen and (min-width: $screen-large) and (max-width: $screen-xlarge - 1px) {
-  .channel {
-    width: 33%;
-    display: inline-block;
-    border: 1px solid lighten($light-grey,5%);
-    overflow-x: hidden;
-  }
 
-  .channels h3 {
-    font-size: 1.3em;
-    padding: 10px;
-    margin-top: 20px;
-  }
 
-  article{
+  .channelList article{
     width: 49.5%;
     display: block;
     vertical-align: top;
@@ -344,3 +344,43 @@ article {
     padding: 10px 30px;
   }
 }
+
+@media screen and (min-width: $screen-large) {
+  .channel {
+    width: 33%;
+    display: inline-block;
+    border: 1px solid lighten($light-grey,5%);
+    overflow-x: hidden;
+  }
+
+  .channels h3 {
+    font-size: 1.3em;
+    padding: 10px;
+    margin-top: 20px;
+  }
+
+
+  .channelList article {
+    width: 33%;
+    display: inline-block;
+    vertical-align: top;
+    height: 500px;
+    position: relative;
+    h1 {
+      font-size: 1.2em;
+    }
+
+    p{
+      font-size: 0.9em;
+    }
+
+    img {
+      max-height: 297px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      padding: 10px;
+    }
+  }
+}
+

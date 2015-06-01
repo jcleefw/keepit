@@ -1,0 +1,115 @@
+<div class="content ">
+  <h1><%= @channel.channel_name%></h1>
+  <button class="test" data-test="testetset">Open popup</button>
+
+<div class="channelList">
+<% @feeds.each do |key, value| %>
+
+  <article>
+    <h1><%= key.content[:title] %></h1>
+
+    <div class="single-content">
+      <!-- if channel is yanko design -->
+      <% if @channel.id == 1 %>
+        <%= key.content[:encoded]%>
+      <% elsif @channel.id == 2 %>
+      <%# binding.pry %>
+        <%= key.content[:description] %>
+        <% if !key.content[:group].nil? %>
+          <img src="<%= key.content[:group]["content"][1]["url"] %>" alt="">
+        <% end %>
+
+      <% elsif @channel.id == 3 %>
+
+      <% elsif @channel.id == 4 %>
+        <p><%= key.content[:description] %></p>
+
+      <% elsif @channel.id == 5 %>
+        <p><%= key.content[:description] %></p>
+        <%= key.content[:encoded] %>
+      <% elsif @channel.id == 6 %>
+        <%= key.content[:description] %>
+        <%= key.content[:encoded] %>
+      <% end %>
+
+    </div>
+  </article>
+
+<% end %>
+</div>
+
+
+<script>
+
+
+  imgArray = [];
+
+  $(document).ready(function() {
+
+    // build array to put inside magnificPopup
+    $('article').map(function (){
+      //var item = {src: $('content img').src, title: $('content img').title}
+      var item = {
+        title: $(this).find('h1').text(),
+        src: $(this).find('img').attr('src'),
+        desc: $(this).find('.single-content').text()
+      }
+      imgArray.push(item)
+    });
+    //console.log(imgArray);
+    $('.test').magnificPopup({
+      alignTop: true,
+      type:'image',
+      items: imgArray,
+      gallery:{
+        enabled:true
+      },
+      image: {
+        markup: '<div class="mfp-figure">'+
+                  '<div class="mfp-close"></div>'+
+                  '<div class="mfp-img "></div>'+
+                  '<div class="mfp-bottom-bar">'+
+                    '<div class="mfp-title"></div>'+
+                    '<div class="mfp-desc"></div>'+
+                    '<div class="mfp-counter"></div>'+
+                  '</div>'+
+                '</div>', // Popup HTML markup. `.mfp-img` div will be replaced with img tag, `.mfp-close` by close button
+
+        cursor: 'mfp-zoom-out-cur', // Class that adds zoom cursor, will be added to body. Set to null to disable zoom out cursor.
+
+        titleSrc: 'title', // Attribute of the target element that contains caption for the slide.
+        // Or the function that should return the title. For example:
+        verticalFit: true, // Fits image in area vertically
+
+        fixedBgPos:  true,
+
+        tError: '<a href="%url%">The image</a> could not be loaded.' // Error message
+      },
+      // Delay in milliseconds before popup is removed
+      removalDelay: 300,
+
+      // Class that is added to popup wrapper and background
+      // make it unique to apply your CSS animations just to this exact popup
+      mainClass: 'mfp-fade'
+    });
+  });
+</script>
+<script>
+
+  var firstP = $('article').first().find('p').first();
+  var firstImg = $('article').first().find('p').first();
+
+  $.each($('article .single-content'), function() {
+    $p = $(this).first().find('p').first().text().substr(0,200)+'...';
+    //$(this).text($(this).text().substr(0,80)+'...');
+    $img = $(this).first().find('img').first();
+    $figure = $(this).first().find('figure').first();
+    // if ($(this).first().find('figure').first())
+    //   $img = $(this).first().find('figure').first();
+    // else
+
+
+    $(this).empty().append($p).append($img, $figure);
+  });
+</script>
+

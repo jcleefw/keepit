@@ -25,9 +25,12 @@ KeepIt is a feed subscription platform that displays daily topics that users are
   + List Channel that belongs to category
   + Style Explore page. (Optional: background)
 
+## Phase 4 01/06/2015
+1. Create Slideshow
+2. Style slideshow for mobile
+3. Create animation for slideshow
 
 ## Extras
-1. Create Slideshow
 2. Create App Logo with Illustrator
 3. Choose a selection of default background for articles with no images.
 4. Create User Dashboard

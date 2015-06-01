@@ -6,8 +6,12 @@
   <link rel='stylesheet' href='/stylesheets/reset.css'>
   <link rel='stylesheet' href='/stylesheets/main.css'>
   <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+  <!-- Magnific Popup core CSS file -->
+  <!-- <link rel="stylesheet" href="/style/magnific-popup.css"> -->
   <script src='/javascripts/jquery.js'></script>
   <script src='/javascripts/application.js'></script>
+  <!-- Magnific Popup core JS file -->
+  <script src="/javascripts/jquery.magnific-popup.js"></script>
 </head>
 <body>
   <header>
@@ -34,28 +38,15 @@
     <h5>&copy; 2015 JC Lee. A General Assembly Project.</h5>
   </footer>
 
-  <!-- example of underscore template
-  <script type="" id="feed-template">
-    <h1>hello {{ name }} {{age}}</h1>
-  </script>-->
-
-
-
-
-
   <script>
-    //example of underscore template
-    /*var tpl = _.template($('#feed-template').html())
-
-  tpl({ name: 'jc', age: '234'}) // => "<h1>helo js</h>" */
-
-  $.each($('.primary li'), function() {
-    if($(this).find('a').attr('href') === window.location.pathname) {
-      $(this).siblings('.active').removeClass('active');
-      $(this).addClass('active');
-    }
-  });
+    $.each($('.primary li'), function() {
+      if($(this).find('a').attr('href') === window.location.pathname) {
+        $(this).siblings('.active').removeClass('active');
+        $(this).addClass('active');
+      }
+    });
 
   </script>
+
 </body>
 
