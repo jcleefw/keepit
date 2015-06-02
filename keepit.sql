@@ -84,3 +84,8 @@ CREATE TABLE feed_variables (
   channel_feed_id SERIAL4,
   variable VARCHAR(250)
 );
+
+ALTER TABLE feed_variables
+  ADD COLUMN image_url_var VARCHAR(250),
+  ADD COLUMN article_link_var VARCHAR(250),
+  ADD COLUMN description_var VARCHAR(250);

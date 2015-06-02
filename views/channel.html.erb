@@ -1,51 +1,33 @@
 <div class="content ">
   <h1><%= @channel.channel_name%></h1>
-  <button class="test" data-test="testetset">Open popup</button>
+  <button class="test">Open Slideshow</button>
 
 <div class="channelList">
-<% @feeds.each do |key, value| %>
 
-  <article>
-    <h1><%= key.content[:title] %></h1>
+<% @feeds.each_with_index do |key, value| %>
+  <!-- use redirect tag because to avoid anchor to be inserted randomly. -->
+  <redirect class="article_link" href="<%= key.content[:origLink] || key.content[:link] %>">
+    <article>
+        <h1><%= key.content[:title] %></h1>
 
-    <div class="single-content">
-      <!-- if channel is yanko design -->
-      <% if @channel.id == 1 %>
-        <%= key.content[:encoded]%>
-      <% elsif @channel.id == 2 %>
-      <%# binding.pry %>
-        <%= key.content[:description] %>
-        <% if !key.content[:group].nil? %>
-          <img src="<%= key.content[:group]["content"][1]["url"] %>" alt="">
-        <% end %>
+        <div class="single-content">
+          <%= @content[value] %>
+        </div>
 
-      <% elsif @channel.id == 3 %>
-
-      <% elsif @channel.id == 4 %>
-        <p><%= key.content[:description] %></p>
-
-      <% elsif @channel.id == 5 %>
-        <p><%= key.content[:description] %></p>
-        <%= key.content[:encoded] %>
-      <% elsif @channel.id == 6 %>
-        <%= key.content[:description] %>
-        <%= key.content[:encoded] %>
-      <% end %>
-
-    </div>
-  </article>
-
+    </article>
+  </redirect>
 <% end %>
 </div>
 
 
 <script>
-
-
   imgArray = [];
 
   $(document).ready(function() {
-
+    $('redirect').on('click', function() {
+      href = $(this).attr('href');
+      window.location.href = href;
+    });
     // build array to put inside magnificPopup
     $('article').map(function (){
       //var item = {src: $('content img').src, title: $('content img').title}
@@ -100,14 +82,16 @@
   var firstImg = $('article').first().find('p').first();
 
   $.each($('article .single-content'), function() {
-    $p = $(this).first().find('p').first().text().substr(0,200)+'...';
-    //$(this).text($(this).text().substr(0,80)+'...');
-    $img = $(this).first().find('img').first();
-    $figure = $(this).first().find('figure').first();
-    // if ($(this).first().find('figure').first())
-    //   $img = $(this).first().find('figure').first();
-    // else
+    $p = $('<p>').html($(this).first().find('p').first().text().substr(0,200)+'...');
 
+    $(this).first().find('img').filter(function() {
+      console.log('width: ' + $(this).width() + 'height: ' + $(this).height());
+      if($(this).height() > 200) {
+        $img = $(this);
+      }
+    });
+
+    $figure = $(this).first().find('figure').first();
 
     $(this).empty().append($p).append($img, $figure);
   });

@@ -30,8 +30,13 @@ var generate_channel_list = function() {
           'href': '/api/channel/'+value.id+'/readable',
           'target': '_blank'
         }).text('Readable');
+        $aVariable = $('<a>').attr({
+          'name': value.id,
+          'href': '/api/channel/'+value.id+'/variable',
+          'target': '_blank'
+        }).text('Select Variable');
 
-        $li = $('<li>').append($a, $aReadable, $rawButton);
+        $li = $('<li>').append($a, $aReadable, $aVariable, $rawButton);
 
         $('.channels').append($li);
       }

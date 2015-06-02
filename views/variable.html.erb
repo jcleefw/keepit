@@ -1,0 +1,100 @@
+<div class="content api">
+  <h1>Listing Variable to import</h1>
+
+  <div id="variables">
+
+    <h5>Variable Listed for <%= @data["title"] %></h5>
+
+    <p>Click on box below to add the keys</p>
+    <% @items[0].each do |data_key, data_info| %>
+    <p class="variable" data-key="<%= data_key %>">
+      <label><%= data_key %></label>
+
+      <% if (!@selected.nil?) && (@selected.include? data_key) %>
+        <span class="show">Added</span>
+      <% else %>
+        <span>Added</span>
+      <% end %>
+    </p>
+    <% end %>
+
+    <h2>Based on keys above type the following for selected fields </h2>
+    <form action="#" method="post">
+      <p>
+        <label for="">Image URL Key :</label>
+        <!-- <input type="text" name="image_url"> -->
+        <select name="image_url" id="image_url">
+          <option value=""></option>
+          <% @selected.each do |data_key| %>
+
+
+
+
+            <option value="<%= data_key %>" <% if data_key == @image_url %> selected="selected"<% end %> ><%= data_key %></option>
+          <% end %>
+        </select>
+      </p>
+      <p>
+        <label for="">Article Link Key :</label>
+        <select name="article_link" id="article_link">
+          <option value=""></option>
+          <% @selected.each do |data_key| %>
+            <option value="<%= data_key %>" <% if data_key == @article_link %> selected="selected"<% end %> ><%= data_key %></option>
+          <% end %>
+
+        </select>
+      </p>
+      <p>
+        <label for="">Description Key: </label>
+        <select name="description" id="description">
+          <option value=""></option>
+          <% @selected.each do |data_key| %>
+            <option value="<%= data_key %>" <% if data_key == @description %> selected="selected"<% end %> ><%= data_key %></option>
+          <% end %>
+        </select>
+      </p>
+      <button id="submit">Submit</button>
+    </form>
+  </div>
+</div>
+
+<script>
+
+  var variable = [];
+  $('#variables').on('click', 'p', function() {
+    $(this).find('span').toggleClass('show');
+  });
+
+  $('select').on('change', function() {
+    //console.log($(this));
+    var option = this.options[this.selectedIndex];
+    console.log(option);
+    //$('#txtEntry2').text($(option).text());
+    //console.log($(this).text('option:selected');)
+
+    $("select#image_url option:selected");
+  });
+
+  $('#submit').on('click', function(e) {
+    e.preventDefault();
+
+    var img_url = $("select#image_url option:selected").val();
+    var article_link = $("select#article_link option:selected").val();
+    var description = $("select#description option:selected").val();
+    $.each($('span.show'), function () {
+      variable.push($(this).parent().data('key'));
+    });
+    //console.log(variable)
+    $.ajax({
+      url: '/api/channel/<%= params[:id] %>/variable',
+      method: 'post',
+      data: { variable: variable, image_url: img_url, description: description, article_link: article_link },
+      context: this
+    }).done(function() {
+      $(this).html('Done')
+      window.location='/api'
+    }).fail(function() {
+      console.log("Fail to save variables.");
+    });
+  });
+</script>

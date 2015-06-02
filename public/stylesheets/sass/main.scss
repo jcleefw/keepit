@@ -41,6 +41,7 @@ footer {
   background: #222;
   color: #bbb;
   padding: 20px;
+  clear: both;
 }
 
 /* Primary nav styling */
@@ -210,7 +211,9 @@ nav.category {
   }
   border: 1px solid $light-grey;
 }
-
+.article_link {
+  cursor: pointer;
+}
 /* Slides article styling */
 .slides{
   background-color: red;

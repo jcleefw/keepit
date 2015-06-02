@@ -105,23 +105,32 @@ get '/api/channel/:id/variable' do
 
   if row.size > 0
     @selected = row[0].variable
+    @image_url = row[0].image_url_var
+    @article_link = row[0].article_link_var
+    @description = row[0].description_var
   end
     @data = JSON.parse raw_feed[0].data
     @data = @data["rss"]["channel"]
     @items = @data["item"]
+    @variable_keys = @data["item"][0].keys
 
   erb :variable
 end
 
 post '/api/channel/:id/variable' do
+  #binding.pry
   row = FeedVariable.where(channel_feed_id: params[:id])
 
   if row.size > 0
     row[0].variable = params["variable"]
+    row[0].image_url_var = params["image_url"]
+    row[0].article_link_var = params["article_link"]
+    row[0].description_var = params["description"]
+    binding.pry
     row[0].save
     row[0]
   else
-    row = FeedVariable.create(channel_feed_id:params[:id], variable:params["variable"])
+    row = FeedVariable.create(channel_feed_id:params[:id], variable:params["variable"], image_url_var:params["image_url"], article_link_var:params["article_link"], description_var:params["description"])
   end
   return "done"
 
