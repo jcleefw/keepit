@@ -69,6 +69,7 @@ INSERT INTO categories (name) VALUES ('Resources');
 UPDATE FROM channel_feeds
 
 TRUNCATE TABLE feeds RESTART IDENTITY
+TRUNCATE TABLE raw_feeds RESTART IDENTITY
 
 SELECT * FROM feeds WHERE channel_feed_id = 7 AND content[:woeid] = 1103816;
 

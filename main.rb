@@ -1,7 +1,7 @@
 require 'active_record'
 # require 'pry'
 require 'sinatra'
-require 'sinatra/reloader'
+#require 'sinatra/reloader'
 require 'httparty'
 
 require_relative 'modal/utils'
