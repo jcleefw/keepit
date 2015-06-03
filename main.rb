@@ -1,5 +1,5 @@
 require 'active_record'
-require 'pry'
+# require 'pry'
 require 'sinatra'
 require 'sinatra/reloader'
 require 'httparty'
@@ -7,6 +7,13 @@ require 'httparty'
 require_relative 'modal/utils'
 require_relative 'modal/config'
 require_relative 'modal/api'
+
+local_db_settings = {
+    :adapter => 'postgresql',
+    :database => 'keepit'
+}
+
+ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'] || local_db_settings)
 
 before do
   @user = User.find_by(username: 'johnsmith')

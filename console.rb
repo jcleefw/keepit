@@ -1,5 +1,5 @@
 require 'active_record'
-require 'pry'
+#require 'pry'
 require 'httparty'
 
 ActiveRecord::Base.logger = Logger.new(STDERR) #show sql in the terminal
