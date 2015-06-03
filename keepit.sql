@@ -22,9 +22,10 @@ CREATE TABLE channel_feeds (
   category_id VARCHAR(45) NULL,
   channel_desc TEXT,
   channel_image VARCHAR(250) NULL,
-  popularity INT DEFAULT 0
-  imported BOOLEAN DEFAULT 0
+  popularity INT DEFAULT 0,
+  imported BOOLEAN DEFAULT false
 );
+
 
 ALTER TABLE channel_feeds
 ADD imported BOOLEAN DEFAULT 0;
