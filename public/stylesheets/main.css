@@ -1688,12 +1688,12 @@ img.mfp-img {
 }
 
 /* The shadow behind the image */
-/* line 257, sass/_magnific-popup.scss */
+/* line 258, sass/_magnific-popup.scss */
 .mfp-figure {
   line-height: 0;
 }
 
-/* line 259, sass/_magnific-popup.scss */
+/* line 260, sass/_magnific-popup.scss */
 .mfp-figure:after {
   content: '';
   position: absolute;
@@ -1709,7 +1709,7 @@ img.mfp-img {
   background: #444;
 }
 
-/* line 272, sass/_magnific-popup.scss */
+/* line 273, sass/_magnific-popup.scss */
 .mfp-figure small {
   color: #BDBDBD;
   display: block;
@@ -1717,12 +1717,12 @@ img.mfp-img {
   line-height: 14px;
 }
 
-/* line 277, sass/_magnific-popup.scss */
+/* line 278, sass/_magnific-popup.scss */
 .mfp-figure figure {
   margin: 0;
 }
 
-/* line 280, sass/_magnific-popup.scss */
+/* line 281, sass/_magnific-popup.scss */
 .mfp-bottom-bar {
   margin-top: -150px;
   position: absolute;
@@ -1734,7 +1734,7 @@ img.mfp-img {
   padding: 20px;
 }
 
-/* line 293, sass/_magnific-popup.scss */
+/* line 294, sass/_magnific-popup.scss */
 .mfp-title {
   text-align: left;
   line-height: 1.3em;
@@ -1746,7 +1746,7 @@ img.mfp-img {
   margin-bottom: 5px;
 }
 
-/* line 304, sass/_magnific-popup.scss */
+/* line 305, sass/_magnific-popup.scss */
 .mfp-desc {
   color: #F3F3F3;
   text-align: left;
@@ -1754,14 +1754,14 @@ img.mfp-img {
   line-height: 1.5em;
 }
 
-/* line 312, sass/_magnific-popup.scss */
+/* line 313, sass/_magnific-popup.scss */
 .mfp-image-holder .mfp-content {
   max-width: 100%;
   /* Added by JC */
   width: 100%;
 }
 
-/* line 318, sass/_magnific-popup.scss */
+/* line 319, sass/_magnific-popup.scss */
 .mfp-gallery .mfp-image-holder .mfp-figure {
   cursor: pointer;
 }
@@ -1771,30 +1771,30 @@ img.mfp-img {
   /**
        * Remove all paddings around the image on small screen
        */
-  /* line 328, sass/_magnific-popup.scss */
+  /* line 329, sass/_magnific-popup.scss */
   .mfp-img-mobile .mfp-image-holder {
     padding-left: 0;
     padding-right: 0;
   }
 
-  /* line 331, sass/_magnific-popup.scss */
+  /* line 332, sass/_magnific-popup.scss */
   .mfp-img-mobile img.mfp-img {
     padding: 0;
   }
 
-  /* line 333, sass/_magnific-popup.scss */
+  /* line 334, sass/_magnific-popup.scss */
   .mfp-img-mobile .mfp-figure:after {
     top: 0;
     bottom: 0;
   }
 
-  /* line 336, sass/_magnific-popup.scss */
+  /* line 337, sass/_magnific-popup.scss */
   .mfp-img-mobile .mfp-figure small {
     display: inline;
     margin-left: 5px;
   }
 
-  /* line 339, sass/_magnific-popup.scss */
+  /* line 340, sass/_magnific-popup.scss */
   .mfp-img-mobile .mfp-bottom-bar {
     background: rgba(0, 0, 0, 0.6);
     bottom: 0;
@@ -1807,18 +1807,18 @@ img.mfp-img {
     box-sizing: border-box;
   }
 
-  /* line 349, sass/_magnific-popup.scss */
+  /* line 350, sass/_magnific-popup.scss */
   .mfp-img-mobile .mfp-bottom-bar:empty {
     padding: 0;
   }
 
-  /* line 351, sass/_magnific-popup.scss */
+  /* line 352, sass/_magnific-popup.scss */
   .mfp-img-mobile .mfp-counter {
     right: 5px;
     top: 3px;
   }
 
-  /* line 354, sass/_magnific-popup.scss */
+  /* line 355, sass/_magnific-popup.scss */
   .mfp-img-mobile .mfp-close {
     top: 0;
     right: 0;
@@ -1832,36 +1832,36 @@ img.mfp-img {
   }
 }
 @media all and (max-width: 900px) {
-  /* line 367, sass/_magnific-popup.scss */
+  /* line 368, sass/_magnific-popup.scss */
   .mfp-arrow {
     -webkit-transform: scale(0.75);
     transform: scale(0.75);
   }
 
-  /* line 371, sass/_magnific-popup.scss */
+  /* line 372, sass/_magnific-popup.scss */
   .mfp-arrow-left {
     -webkit-transform-origin: 0;
     transform-origin: 0;
   }
 
-  /* line 375, sass/_magnific-popup.scss */
+  /* line 376, sass/_magnific-popup.scss */
   .mfp-arrow-right {
     -webkit-transform-origin: 100%;
     transform-origin: 100%;
   }
 
-  /* line 379, sass/_magnific-popup.scss */
+  /* line 380, sass/_magnific-popup.scss */
   .mfp-container {
     padding-left: 6px;
     padding-right: 6px;
   }
 }
-/* line 384, sass/_magnific-popup.scss */
+/* line 385, sass/_magnific-popup.scss */
 .mfp-ie7 .mfp-img {
   padding: 0;
 }
 
-/* line 386, sass/_magnific-popup.scss */
+/* line 387, sass/_magnific-popup.scss */
 .mfp-ie7 .mfp-bottom-bar {
   width: 600px;
   left: 50%;
@@ -1870,24 +1870,78 @@ img.mfp-img {
   padding-bottom: 5px;
 }
 
-/* line 392, sass/_magnific-popup.scss */
+/* line 393, sass/_magnific-popup.scss */
 .mfp-ie7 .mfp-container {
   padding: 0;
 }
 
-/* line 394, sass/_magnific-popup.scss */
+/* line 395, sass/_magnific-popup.scss */
 .mfp-ie7 .mfp-content {
   padding-top: 44px;
 }
 
-/* line 396, sass/_magnific-popup.scss */
+/* line 397, sass/_magnific-popup.scss */
 .mfp-ie7 .mfp-close {
   top: 0;
   right: 0;
   padding-top: 0;
 }
 
-/* line 19, sass/main.scss */
+/* overlay at start */
+/* line 2, sass/_magnific-popup-animation.scss */
+.mfp-fade.mfp-bg {
+  opacity: 0;
+  -webkit-transition: all .5s ease-out;
+  -moz-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+  /* overlay animate in */
+  /* overlay animate out */
+}
+/* line 10, sass/_magnific-popup-animation.scss */
+.mfp-fade.mfp-bg .mfp-ready {
+  opacity: 0.8;
+}
+/* line 14, sass/_magnific-popup-animation.scss */
+.mfp-fade.mfp-bg .mfp-removing {
+  opacity: 0;
+}
+
+/* content at start */
+/* line 20, sass/_magnific-popup-animation.scss */
+.mfp-fade.mfp-wrap .mfp-content {
+  opacity: 0;
+  -webkit-transition: all .5s ease-out;
+  -moz-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+}
+
+/* content animate it */
+/* line 28, sass/_magnific-popup-animation.scss */
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+  opacity: 1;
+}
+
+/* content animate out */
+/* line 33, sass/_magnific-popup-animation.scss */
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* line 52, sass/_magnific-popup-animation.scss */
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+/* line 20, sass/main.scss */
 * {
   padding: 0;
   margin: 0;
@@ -1895,25 +1949,25 @@ img.mfp-img {
   transition: all 0.5s ease;
 }
 
-/* line 25, sass/main.scss */
+/* line 26, sass/main.scss */
 body {
   color: #3D3D3D;
   font-size: 16px;
   font-family: 'Droid Sans', sans-serif;
 }
 
-/* line 30, sass/main.scss */
+/* line 31, sass/main.scss */
 ul {
   width: 100%;
   display: inline-block;
 }
 
-/* line 34, sass/main.scss */
+/* line 35, sass/main.scss */
 a {
   text-decoration: none;
 }
 
-/* line 38, sass/main.scss */
+/* line 39, sass/main.scss */
 footer {
   width: 100%;
   text-align: center;
@@ -1924,91 +1978,91 @@ footer {
 }
 
 /* Primary nav styling */
-/* line 48, sass/main.scss */
+/* line 49, sass/main.scss */
 nav.primary {
   box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 4px 2px;
 }
-/* line 50, sass/main.scss */
+/* line 51, sass/main.scss */
 nav.primary li {
   display: inline-block;
   padding: 15px;
 }
-/* line 53, sass/main.scss */
+/* line 54, sass/main.scss */
 nav.primary li a {
   color: #3D3D3D;
 }
-/* line 56, sass/main.scss */
+/* line 57, sass/main.scss */
 nav.primary li:hover {
   background-color: #32a900;
 }
-/* line 58, sass/main.scss */
+/* line 59, sass/main.scss */
 nav.primary li:hover a {
   color: white;
 }
-/* line 63, sass/main.scss */
+/* line 64, sass/main.scss */
 nav.primary li.active {
   background-color: #3AC200;
 }
-/* line 66, sass/main.scss */
+/* line 67, sass/main.scss */
 nav.primary li.active a {
   color: white;
 }
 
 /* User Standard Message */
-/* line 73, sass/main.scss */
+/* line 74, sass/main.scss */
 .message {
   margin: 30px 10px;
   height: 50px;
 }
 
-/* line 78, sass/main.scss */
+/* line 79, sass/main.scss */
 .weatherUpdate {
   margin-top: 10px;
 }
 
-/* line 81, sass/main.scss */
+/* line 82, sass/main.scss */
 span.weather {
   padding-right: 20px;
 }
-/* line 84, sass/main.scss */
+/* line 85, sass/main.scss */
 span.weather em {
   font-size: 2em;
   font-style: normal;
   color: #3AC200;
   font-weight: bold;
 }
-/* line 90, sass/main.scss */
+/* line 91, sass/main.scss */
 span.weather b {
   font-size: .8em;
   padding-left: 3px;
 }
 
-/* line 96, sass/main.scss */
+/* line 97, sass/main.scss */
 .container {
   position: relative;
   display: inline-block;
   width: 100%;
 }
 
-/* line 102, sass/main.scss */
+/* line 103, sass/main.scss */
 nav.category {
   width: 100%;
   background-color: #3D3D3D;
   text-align: center;
   padding: 15px;
 }
-/* line 107, sass/main.scss */
+/* line 108, sass/main.scss */
 nav.category li {
   display: inline-block;
   padding: 0 15px;
 }
-/* line 110, sass/main.scss */
+/* line 111, sass/main.scss */
 nav.category li a {
   color: white;
   cursor: pointer;
 }
 
-/* line 117, sass/main.scss */
+/* line 118, sass/main.scss */
 .channels h3 {
   background-color: #3AC200;
   padding: 10px;
@@ -2018,7 +2072,7 @@ nav.category li a {
   color: white;
 }
 
-/* line 127, sass/main.scss */
+/* line 128, sass/main.scss */
 .channel {
   display: block;
   width: 100%;
@@ -2032,35 +2086,35 @@ nav.category li a {
   cursor: pointer;
   overflow-y: hidden;
 }
-/* line 139, sass/main.scss */
+/* line 140, sass/main.scss */
 .channel div {
   height: inherit;
   width: 100%;
 }
-/* line 144, sass/main.scss */
+/* line 145, sass/main.scss */
 .channel:hover > .channelDesc {
   top: 70%;
   transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
   background-color: #c0bdbf;
 }
-/* line 149, sass/main.scss */
+/* line 150, sass/main.scss */
 .channel img {
   height: 200px;
   width: 100%;
 }
 
-/* line 155, sass/main.scss */
+/* line 156, sass/main.scss */
 .channelName p {
   position: relative;
   top: 50%;
 }
 
-/* line 160, sass/main.scss */
+/* line 161, sass/main.scss */
 .channelDesc {
   position: absolute;
   top: 200px;
 }
-/* line 163, sass/main.scss */
+/* line 164, sass/main.scss */
 .channelDesc:after {
   content: '';
   width: 100%;
@@ -2071,14 +2125,14 @@ nav.category li a {
   left: 0;
   top: -11px;
 }
-/* line 173, sass/main.scss */
+/* line 174, sass/main.scss */
 .channelDesc p {
   padding: 0 15px;
   color: #3D3D3D;
   text-align: left;
   font-size: 0.8em;
 }
-/* line 180, sass/main.scss */
+/* line 181, sass/main.scss */
 .channelDesc .title {
   text-transform: uppercase;
   padding: 5px 15px;
@@ -2087,11 +2141,11 @@ nav.category li a {
   font-size: 1em;
 }
 
-/* line 189, sass/main.scss */
+/* line 190, sass/main.scss */
 .content h1, .content ul {
   padding: 0 50px;
 }
-/* line 192, sass/main.scss */
+/* line 193, sass/main.scss */
 .content h1 {
   background-color: #3D3D3D;
   color: white;
@@ -2099,55 +2153,55 @@ nav.category li a {
 }
 
 /* Feed article styling */
-/* line 200, sass/main.scss */
+/* line 201, sass/main.scss */
 .channelList article {
   padding: 15px;
   border: 1px solid #c0bdbf;
 }
-/* line 202, sass/main.scss */
+/* line 203, sass/main.scss */
 .channelList article * {
   padding: 10px 0;
 }
-/* line 205, sass/main.scss */
+/* line 206, sass/main.scss */
 .channelList article img {
   width: 100%;
 }
-/* line 208, sass/main.scss */
+/* line 209, sass/main.scss */
 .channelList article h1 {
   background-color: white;
   color: #3D3D3D;
 }
 
-/* line 214, sass/main.scss */
+/* line 215, sass/main.scss */
 .article_link {
   cursor: pointer;
 }
 
 /* Slides article styling */
-/* line 218, sass/main.scss */
+/* line 219, sass/main.scss */
 .slides {
   background-color: red;
 }
 
 /* API Styling */
-/* line 223, sass/main.scss */
+/* line 224, sass/main.scss */
 .api {
   padding: 30px;
 }
-/* line 225, sass/main.scss */
+/* line 226, sass/main.scss */
 .api li {
   padding: 30px 0;
   list-style: none;
   border-bottom: 1px solid #bdbdbd;
   text-align: left;
 }
-/* line 230, sass/main.scss */
+/* line 231, sass/main.scss */
 .api li a {
   display: inline-block;
   width: 70%;
   text-align: left;
 }
-/* line 236, sass/main.scss */
+/* line 237, sass/main.scss */
 .api button {
   padding: 10px;
   border: none;
@@ -2155,48 +2209,48 @@ nav.category li a {
   color: white;
   font-size: 1em;
 }
-/* line 243, sass/main.scss */
+/* line 244, sass/main.scss */
 .api button:focus {
   box-shadow: none;
 }
-/* line 247, sass/main.scss */
+/* line 248, sass/main.scss */
 .api h1 {
   margin-bottom: 30px;
 }
-/* line 250, sass/main.scss */
+/* line 251, sass/main.scss */
 .api p {
   padding: 5px 0;
 }
-/* line 253, sass/main.scss */
+/* line 254, sass/main.scss */
 .api label {
   color: #3AC200;
 }
-/* line 256, sass/main.scss */
+/* line 257, sass/main.scss */
 .api h5 {
   color: #7C64A2;
 }
-/* line 260, sass/main.scss */
+/* line 261, sass/main.scss */
 .api .channelInfo {
   border: 1px dashed purple;
   padding: 20px;
   font-size: 0.8em;
 }
-/* line 266, sass/main.scss */
+/* line 267, sass/main.scss */
 .api .channelItem {
   margin-top: 30px;
 }
-/* line 270, sass/main.scss */
+/* line 271, sass/main.scss */
 .api .item {
   border: 1px dashed purple;
   padding: 20px;
   margin: 10px;
 }
 
-/* line 277, sass/main.scss */
+/* line 278, sass/main.scss */
 #variables {
   padding: 20px 0;
 }
-/* line 279, sass/main.scss */
+/* line 280, sass/main.scss */
 #variables .variable {
   display: inline-block;
   padding: 20px;
@@ -2205,58 +2259,58 @@ nav.category li a {
   cursor: pointer;
   text-align: center;
 }
-/* line 287, sass/main.scss */
+/* line 288, sass/main.scss */
 #variables .variable span {
   font-size: .7em;
   color: #c0bdbf;
   display: none;
 }
-/* line 292, sass/main.scss */
+/* line 293, sass/main.scss */
 #variables .variable span.show {
   display: block;
 }
 
-/* line 298, sass/main.scss */
+/* line 299, sass/main.scss */
 .successMessage {
   padding: 10px 50px;
   background-color: #3AC200;
   color: white;
 }
 
-/* line 304, sass/main.scss */
+/* line 305, sass/main.scss */
 .btnProcess {
   opacity: 0.5;
 }
 
-/* line 307, sass/main.scss */
+/* line 308, sass/main.scss */
 .fs-img {
   width: 100%;
 }
 
 @media screen and (min-width: 600px) and (max-width: 991px) {
-  /* line 312, sass/main.scss */
+  /* line 313, sass/main.scss */
   .channels {
     text-align: center;
   }
 
-  /* line 316, sass/main.scss */
+  /* line 317, sass/main.scss */
   .channel {
     width: 50%;
     display: inline-block;
   }
 
-  /* line 322, sass/main.scss */
+  /* line 323, sass/main.scss */
   .message {
     padding: 0 30px;
   }
 
-  /* line 326, sass/main.scss */
+  /* line 327, sass/main.scss */
   .api h1 {
     padding: 10px 30px;
   }
 }
 @media screen and (min-width: 992px) and (max-width: 1199px) {
-  /* line 334, sass/main.scss */
+  /* line 335, sass/main.scss */
   .channelList article {
     width: 49.5%;
     display: block;
@@ -2265,18 +2319,18 @@ nav.category li a {
     background-color: white;
   }
 
-  /* line 342, sass/main.scss */
+  /* line 343, sass/main.scss */
   .message {
     padding: 0 30px;
   }
 
-  /* line 346, sass/main.scss */
+  /* line 347, sass/main.scss */
   .api h1 {
     padding: 10px 30px;
   }
 }
 @media screen and (min-width: 992px) {
-  /* line 352, sass/main.scss */
+  /* line 353, sass/main.scss */
   .channel {
     width: 33%;
     display: inline-block;
@@ -2284,14 +2338,14 @@ nav.category li a {
     overflow-x: hidden;
   }
 
-  /* line 359, sass/main.scss */
+  /* line 360, sass/main.scss */
   .channels h3 {
     font-size: 1.3em;
     padding: 10px;
     margin-top: 20px;
   }
 
-  /* line 366, sass/main.scss */
+  /* line 367, sass/main.scss */
   .channelList article {
     width: 33%;
     display: inline-block;
@@ -2299,15 +2353,15 @@ nav.category li a {
     height: 500px;
     position: relative;
   }
-  /* line 372, sass/main.scss */
+  /* line 373, sass/main.scss */
   .channelList article h1 {
     font-size: 1.2em;
   }
-  /* line 376, sass/main.scss */
+  /* line 377, sass/main.scss */
   .channelList article p {
     font-size: 0.9em;
   }
-  /* line 380, sass/main.scss */
+  /* line 381, sass/main.scss */
   .channelList article img {
     max-height: 297px;
     position: absolute;

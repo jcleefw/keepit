@@ -1,6 +1,6 @@
 <div class="content ">
   <h1><%= @channel.channel_name%></h1>
-  <button class="test">Open Slideshow</button>
+  <button class="slideshow">Open Slideshow</button>
 
 <div class="channelList">
 
@@ -38,8 +38,10 @@
       }
       imgArray.push(item)
     });
-    //console.log(imgArray);
-    $('.test').magnificPopup({
+
+    var intervalID;
+
+    $('.slideshow').magnificPopup({
       alignTop: true,
       type:'image',
       items: imgArray,
@@ -67,6 +69,46 @@
 
         tError: '<a href="%url%">The image</a> could not be loaded.' // Error message
       },
+      callbacks: {
+        open: function() {
+          function timer() {
+            // $('.mvp-content').ready(function() {
+            //   console.log('hello');
+            // });
+            $('button.mfp-arrow-right').trigger('click');
+            // intervalID = window.setInterval(hello, 400*15);
+          }
+          intervalID = window.setInterval(timer, 400*15);
+
+          $.magnificPopup.instance.next = function () {
+            var self = this;
+            setTimeout(function () {
+                $.magnificPopup.proto.next.call(self);
+            }, 50);
+            var effectNext = "fadeIn";
+            var animateOptions = {
+                delay: 200,
+                duration: !/\./.test(effectNext) ? 500 : null
+            };
+            if (effectNext === "fadeIn" || /In$/.test(effectNext)) {
+                this.content.velocity({
+                    opacity: 0
+                }, 100);
+            }
+
+            this.content.velocity(effectNext, animateOptions);
+
+          };
+
+        },
+        close: function() {
+          window.clearInterval(intervalID);
+        },
+        imageLoadComplete: function() {
+          var self = this;
+          setTimeout(function() { self.wrap.addClass('mfp-image-loaded'); }, 16);
+        }
+      },
       // Delay in milliseconds before popup is removed
       removalDelay: 300,
 
@@ -85,7 +127,7 @@
     $p = $('<p>').html($(this).first().find('p').first().text().substr(0,200)+'...');
 
     $(this).first().find('img').filter(function() {
-      console.log('width: ' + $(this).width() + 'height: ' + $(this).height());
+      //console.log('width: ' + $(this).width() + 'height: ' + $(this).height());
       if($(this).height() > 200) {
         $img = $(this);
       }
