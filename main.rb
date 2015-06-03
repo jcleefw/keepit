@@ -1,7 +1,6 @@
 require 'active_record'
 # require 'pry'
 require 'sinatra'
-require 'sinatra/activerecord/rake'
 #require 'sinatra/reloader'
 require 'httparty'
 
