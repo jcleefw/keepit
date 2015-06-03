@@ -7,6 +7,8 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 # Seeds for ChannelFeed
+
+
 ChannelFeed.create([{ channel_name: 'Yanko Design', channel_url: 'http://feeds.feedburner.com/yankodesign', category_id: 4,  channel_desc: 'Modern Industrial Design News', popularity: 0, channel_image: '/images/yankodesign-logo.jpg'}]);
 ChannelFeed.create([{ channel_name: 'ABC World News', channel_url: 'http://www.abc.net.au/news/feed/52278/rss.xml', category_id: 2,  channel_desc: 'Latest news as it happens from around the world', popularity: 10, channel_image: '/images/abcnewsdefault_90.jpg'}]);
 ChannelFeed.create([{ channel_name: 'Angry Birds Nest', channel_url: 'http://feeds.feedburner.com/angrybirdsnest', category_id: 1,  channel_desc: 'Angry Birds Walkthrough Videos, Golden Eggs, and more', popularity: 0, channel_image: '/images/Angry_birds_listorylove_resize.png'}]);
