@@ -67,8 +67,6 @@ INSERT INTO categories (name) VALUES ('Design');
 INSERT INTO categories (name) VALUES ('Hacker Tips');
 INSERT INTO categories (name) VALUES ('Resources');
 
-UPDATE FROM channel_feeds
-
 TRUNCATE TABLE feeds RESTART IDENTITY
 TRUNCATE TABLE raw_feeds RESTART IDENTITY
 
