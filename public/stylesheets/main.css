@@ -2274,48 +2274,52 @@ nav.category li a {
 #variables .variable span.show {
   display: block;
 }
+/* line 300, sass/main.scss */
+#variables .variableSubtitle {
+  margin-top: 20px;
+}
 
-/* line 302, sass/main.scss */
+/* line 305, sass/main.scss */
 .successMessage {
   padding: 10px 50px;
   background-color: #3AC200;
   color: white;
 }
 
-/* line 308, sass/main.scss */
+/* line 311, sass/main.scss */
 .btnProcess {
   opacity: 0.5;
 }
 
-/* line 311, sass/main.scss */
+/* line 314, sass/main.scss */
 .fs-img {
   width: 100%;
 }
 
 @media screen and (min-width: 600px) and (max-width: 991px) {
-  /* line 316, sass/main.scss */
+  /* line 319, sass/main.scss */
   .channels {
     text-align: center;
   }
 
-  /* line 320, sass/main.scss */
+  /* line 323, sass/main.scss */
   .channel {
     width: 50%;
     display: inline-block;
   }
 
-  /* line 326, sass/main.scss */
+  /* line 329, sass/main.scss */
   .message {
     padding: 0 30px;
   }
 
-  /* line 330, sass/main.scss */
+  /* line 333, sass/main.scss */
   .api h1 {
     padding: 10px 30px;
   }
 }
 @media screen and (min-width: 992px) and (max-width: 1199px) {
-  /* line 338, sass/main.scss */
+  /* line 341, sass/main.scss */
   .channelList article {
     width: 49.5%;
     display: block;
@@ -2324,18 +2328,18 @@ nav.category li a {
     background-color: white;
   }
 
-  /* line 346, sass/main.scss */
+  /* line 349, sass/main.scss */
   .message {
     padding: 0 30px;
   }
 
-  /* line 350, sass/main.scss */
+  /* line 353, sass/main.scss */
   .api h1 {
     padding: 10px 30px;
   }
 }
 @media screen and (min-width: 992px) {
-  /* line 356, sass/main.scss */
+  /* line 359, sass/main.scss */
   .channel {
     width: 33%;
     display: inline-block;
@@ -2343,14 +2347,14 @@ nav.category li a {
     overflow-x: hidden;
   }
 
-  /* line 363, sass/main.scss */
+  /* line 366, sass/main.scss */
   .channels h3 {
     font-size: 1.3em;
     padding: 10px;
     margin-top: 20px;
   }
 
-  /* line 370, sass/main.scss */
+  /* line 373, sass/main.scss */
   .channelList article {
     width: 33%;
     display: inline-block;
@@ -2358,15 +2362,15 @@ nav.category li a {
     height: 500px;
     position: relative;
   }
-  /* line 376, sass/main.scss */
+  /* line 379, sass/main.scss */
   .channelList article h1 {
     font-size: 1.2em;
   }
-  /* line 380, sass/main.scss */
+  /* line 383, sass/main.scss */
   .channelList article p {
     font-size: 0.9em;
   }
-  /* line 384, sass/main.scss */
+  /* line 387, sass/main.scss */
   .channelList article img {
     max-height: 297px;
     position: absolute;
