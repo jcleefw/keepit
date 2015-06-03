@@ -1,1 +1,1 @@
-require "sinatra/active/rake"
+require "sinatra/activerecord/rake"
