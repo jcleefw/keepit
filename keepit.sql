@@ -1,4 +1,8 @@
+
+
 CREATE DATABASE keepit;
+TRUNCATE TABLE feeds RESTART IDENTITY
+TRUNCATE TABLE raw_feeds RESTART IDENTITY
 
 \c keepit
 
@@ -67,8 +71,7 @@ INSERT INTO categories (name) VALUES ('Design');
 INSERT INTO categories (name) VALUES ('Hacker Tips');
 INSERT INTO categories (name) VALUES ('Resources');
 
-TRUNCATE TABLE feeds RESTART IDENTITY
-TRUNCATE TABLE raw_feeds RESTART IDENTITY
+
 
 SELECT * FROM feeds WHERE channel_feed_id = 7 AND content[:woeid] = 1103816;
 
@@ -89,3 +92,10 @@ ALTER TABLE feed_variables
   ADD COLUMN image_url_var VARCHAR(250),
   ADD COLUMN article_link_var VARCHAR(250),
   ADD COLUMN description_var VARCHAR(250);
+
+
+INSERT INTO feed_variables (channel_feed_id, variable) VALUES (2,'---\n- title\n- link\n- description\n- pubDate\n- group\n');
+INSERT INTO feed_variables (channel_feed_id, variable) VALUES (5,'---\n- title\n- pubDate\n- description\n- encoded\n- origLink\n');
+INSERT INTO feed_variables (channel_feed_id, variable) VALUES (6,'---\n- title\n- link\n- pubDate\n- description\n');
+INSERT INTO feed_variables (channel_feed_id, variable) VALUES (4,'---\n- title\n- description\n- link\n- pubDate\n');
+INSERT INTO feed_variables (channel_feed_id, variable) VALUES (1,ARRAY['title', 'description', 'pubDate', 'encoded', 'origLink']);

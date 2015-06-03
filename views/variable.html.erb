@@ -2,7 +2,7 @@
   <h1>Listing Variable to import</h1>
 
   <div id="variables">
-
+    <% binding.pry %>
     <h5>Variable Listed for <%= @data["title"] %></h5>
 
     <p>Click on box below to add the keys</p>
@@ -18,19 +18,18 @@
     </p>
     <% end %>
 
-    <h2>Based on keys above type the following for selected fields </h2>
-    <form action="#" method="post">
+    <% if (!@selected.nil?) && (@selected.include? data_key) %>
+      <h2>Based on keys above type the following for selected fields </h2>
+
       <p>
         <label for="">Image URL Key :</label>
         <!-- <input type="text" name="image_url"> -->
         <select name="image_url" id="image_url">
           <option value=""></option>
-          <% @selected.each do |data_key| %>
-
-
-
-
-            <option value="<%= data_key %>" <% if data_key == @image_url %> selected="selected"<% end %> ><%= data_key %></option>
+          <% if (!@selected.nil?) && (@selected.include? data_key) %>
+            <% @selected.each do |data_key| %>
+              <option value="<%= data_key %>" <% if data_key == @image_url %> selected="selected"<% end %> ><%= data_key %></option>
+            <% end %>
           <% end %>
         </select>
       </p>
@@ -38,23 +37,27 @@
         <label for="">Article Link Key :</label>
         <select name="article_link" id="article_link">
           <option value=""></option>
-          <% @selected.each do |data_key| %>
-            <option value="<%= data_key %>" <% if data_key == @article_link %> selected="selected"<% end %> ><%= data_key %></option>
+          <% if (!@selected.nil?) && (@selected.include? data_key) %>
+            <% @selected.each do |data_key| %>
+              <option value="<%= data_key %>" <% if data_key == @article_link %> selected="selected"<% end %> ><%= data_key %></option>
+            <% end %>
           <% end %>
-
         </select>
       </p>
       <p>
         <label for="">Description Key: </label>
         <select name="description" id="description">
           <option value=""></option>
-          <% @selected.each do |data_key| %>
-            <option value="<%= data_key %>" <% if data_key == @description %> selected="selected"<% end %> ><%= data_key %></option>
+          <% if (!@selected.nil?) && (@selected.include? data_key) %>
+            <% @selected.each do |data_key| %>
+              <option value="<%= data_key %>" <% if data_key == @description %> selected="selected"<% end %> ><%= data_key %></option>
+            <% end %>
           <% end %>
         </select>
       </p>
-      <button id="submit">Submit</button>
-    </form>
+    <% end %>
+    <button id="submit">Submit</button>
+
   </div>
 </div>
 

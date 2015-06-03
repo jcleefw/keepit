@@ -99,7 +99,7 @@ get '/api/channel/:id/readable' do
 end
 
 get '/api/channel/:id/variable' do
-  #"What to import"
+
   raw_feed = RawFeed.where(channel_feed_id: params[:id])
   row = FeedVariable.where(channel_feed_id: params[:id])
 
@@ -109,11 +109,12 @@ get '/api/channel/:id/variable' do
     @article_link = row[0].article_link_var
     @description = row[0].description_var
   end
+
     @data = JSON.parse raw_feed[0].data
     @data = @data["rss"]["channel"]
     @items = @data["item"]
     @variable_keys = @data["item"][0].keys
-
+    #binding.pry
   erb :variable
 end
 
@@ -126,7 +127,7 @@ post '/api/channel/:id/variable' do
     row[0].image_url_var = params["image_url"]
     row[0].article_link_var = params["article_link"]
     row[0].description_var = params["description"]
-    binding.pry
+    #binding.pry
     row[0].save
     row[0]
   else
