@@ -2103,18 +2103,23 @@ nav.category li a {
   width: 100%;
 }
 
-/* line 156, sass/main.scss */
+/* line 155, sass/main.scss */
+.channelOption {
+  width: auto;
+}
+
+/* line 159, sass/main.scss */
 .channelName p {
   position: relative;
   top: 50%;
 }
 
-/* line 161, sass/main.scss */
+/* line 164, sass/main.scss */
 .channelDesc {
   position: absolute;
   top: 200px;
 }
-/* line 164, sass/main.scss */
+/* line 167, sass/main.scss */
 .channelDesc:after {
   content: '';
   width: 100%;
@@ -2125,14 +2130,14 @@ nav.category li a {
   left: 0;
   top: -11px;
 }
-/* line 174, sass/main.scss */
+/* line 177, sass/main.scss */
 .channelDesc p {
   padding: 0 15px;
   color: #3D3D3D;
   text-align: left;
   font-size: 0.8em;
 }
-/* line 181, sass/main.scss */
+/* line 184, sass/main.scss */
 .channelDesc .title {
   text-transform: uppercase;
   padding: 5px 15px;
@@ -2141,11 +2146,11 @@ nav.category li a {
   font-size: 1em;
 }
 
-/* line 190, sass/main.scss */
+/* line 193, sass/main.scss */
 .content h1, .content ul {
   padding: 0 50px;
 }
-/* line 193, sass/main.scss */
+/* line 196, sass/main.scss */
 .content h1 {
   background-color: #3D3D3D;
   color: white;
@@ -2153,55 +2158,55 @@ nav.category li a {
 }
 
 /* Feed article styling */
-/* line 201, sass/main.scss */
+/* line 204, sass/main.scss */
 .channelList article {
   padding: 15px;
   border: 1px solid #c0bdbf;
 }
-/* line 203, sass/main.scss */
+/* line 206, sass/main.scss */
 .channelList article * {
   padding: 10px 0;
 }
-/* line 206, sass/main.scss */
+/* line 209, sass/main.scss */
 .channelList article img {
   width: 100%;
 }
-/* line 209, sass/main.scss */
+/* line 212, sass/main.scss */
 .channelList article h1 {
   background-color: white;
   color: #3D3D3D;
 }
 
-/* line 215, sass/main.scss */
+/* line 218, sass/main.scss */
 .article_link {
   cursor: pointer;
 }
 
 /* Slides article styling */
-/* line 219, sass/main.scss */
+/* line 222, sass/main.scss */
 .slides {
   background-color: red;
 }
 
 /* API Styling */
-/* line 224, sass/main.scss */
+/* line 227, sass/main.scss */
 .api {
   padding: 30px;
 }
-/* line 226, sass/main.scss */
+/* line 229, sass/main.scss */
 .api li {
   padding: 30px 0;
   list-style: none;
   border-bottom: 1px solid #bdbdbd;
   text-align: left;
 }
-/* line 231, sass/main.scss */
+/* line 234, sass/main.scss */
 .api li a {
   display: inline-block;
   width: 70%;
   text-align: left;
 }
-/* line 237, sass/main.scss */
+/* line 240, sass/main.scss */
 .api button {
   padding: 10px;
   border: none;
@@ -2209,48 +2214,48 @@ nav.category li a {
   color: white;
   font-size: 1em;
 }
-/* line 244, sass/main.scss */
+/* line 247, sass/main.scss */
 .api button:focus {
   box-shadow: none;
 }
-/* line 248, sass/main.scss */
+/* line 251, sass/main.scss */
 .api h1 {
   margin-bottom: 30px;
 }
-/* line 251, sass/main.scss */
+/* line 254, sass/main.scss */
 .api p {
   padding: 5px 0;
 }
-/* line 254, sass/main.scss */
+/* line 257, sass/main.scss */
 .api label {
   color: #3AC200;
 }
-/* line 257, sass/main.scss */
+/* line 260, sass/main.scss */
 .api h5 {
   color: #7C64A2;
 }
-/* line 261, sass/main.scss */
+/* line 264, sass/main.scss */
 .api .channelInfo {
   border: 1px dashed purple;
   padding: 20px;
   font-size: 0.8em;
 }
-/* line 267, sass/main.scss */
+/* line 270, sass/main.scss */
 .api .channelItem {
   margin-top: 30px;
 }
-/* line 271, sass/main.scss */
+/* line 274, sass/main.scss */
 .api .item {
   border: 1px dashed purple;
   padding: 20px;
   margin: 10px;
 }
 
-/* line 278, sass/main.scss */
+/* line 281, sass/main.scss */
 #variables {
   padding: 20px 0;
 }
-/* line 280, sass/main.scss */
+/* line 283, sass/main.scss */
 #variables .variable {
   display: inline-block;
   padding: 20px;
@@ -2259,58 +2264,58 @@ nav.category li a {
   cursor: pointer;
   text-align: center;
 }
-/* line 288, sass/main.scss */
+/* line 291, sass/main.scss */
 #variables .variable span {
   font-size: .7em;
   color: #c0bdbf;
   display: none;
 }
-/* line 293, sass/main.scss */
+/* line 296, sass/main.scss */
 #variables .variable span.show {
   display: block;
 }
 
-/* line 299, sass/main.scss */
+/* line 302, sass/main.scss */
 .successMessage {
   padding: 10px 50px;
   background-color: #3AC200;
   color: white;
 }
 
-/* line 305, sass/main.scss */
+/* line 308, sass/main.scss */
 .btnProcess {
   opacity: 0.5;
 }
 
-/* line 308, sass/main.scss */
+/* line 311, sass/main.scss */
 .fs-img {
   width: 100%;
 }
 
 @media screen and (min-width: 600px) and (max-width: 991px) {
-  /* line 313, sass/main.scss */
+  /* line 316, sass/main.scss */
   .channels {
     text-align: center;
   }
 
-  /* line 317, sass/main.scss */
+  /* line 320, sass/main.scss */
   .channel {
     width: 50%;
     display: inline-block;
   }
 
-  /* line 323, sass/main.scss */
+  /* line 326, sass/main.scss */
   .message {
     padding: 0 30px;
   }
 
-  /* line 327, sass/main.scss */
+  /* line 330, sass/main.scss */
   .api h1 {
     padding: 10px 30px;
   }
 }
 @media screen and (min-width: 992px) and (max-width: 1199px) {
-  /* line 335, sass/main.scss */
+  /* line 338, sass/main.scss */
   .channelList article {
     width: 49.5%;
     display: block;
@@ -2319,18 +2324,18 @@ nav.category li a {
     background-color: white;
   }
 
-  /* line 343, sass/main.scss */
+  /* line 346, sass/main.scss */
   .message {
     padding: 0 30px;
   }
 
-  /* line 347, sass/main.scss */
+  /* line 350, sass/main.scss */
   .api h1 {
     padding: 10px 30px;
   }
 }
 @media screen and (min-width: 992px) {
-  /* line 353, sass/main.scss */
+  /* line 356, sass/main.scss */
   .channel {
     width: 33%;
     display: inline-block;
@@ -2338,14 +2343,14 @@ nav.category li a {
     overflow-x: hidden;
   }
 
-  /* line 360, sass/main.scss */
+  /* line 363, sass/main.scss */
   .channels h3 {
     font-size: 1.3em;
     padding: 10px;
     margin-top: 20px;
   }
 
-  /* line 367, sass/main.scss */
+  /* line 370, sass/main.scss */
   .channelList article {
     width: 33%;
     display: inline-block;
@@ -2353,15 +2358,15 @@ nav.category li a {
     height: 500px;
     position: relative;
   }
-  /* line 373, sass/main.scss */
+  /* line 376, sass/main.scss */
   .channelList article h1 {
     font-size: 1.2em;
   }
-  /* line 377, sass/main.scss */
+  /* line 380, sass/main.scss */
   .channelList article p {
     font-size: 0.9em;
   }
-  /* line 381, sass/main.scss */
+  /* line 384, sass/main.scss */
   .channelList article img {
     max-height: 297px;
     position: absolute;

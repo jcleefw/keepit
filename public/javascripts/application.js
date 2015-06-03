@@ -24,16 +24,18 @@ var generate_channel_list = function() {
           'name': value.id,
           'href': '/api/channel/'+value.id,
           'target': '_blank'
-        }).text(value.channel_name);
+        }).html('<h4 class="channel_title">Channel Name: '+value.channel_name+'</h4>');
         $aReadable = $('<a>').attr({
           'name': value.id,
           'href': '/api/channel/'+value.id+'/readable',
-          'target': '_blank'
+          'target': '_blank',
+          'class': 'channelOption'
         }).text('Readable');
         $aVariable = $('<a>').attr({
           'name': value.id,
           'href': '/api/channel/'+value.id+'/variable',
-          'target': '_blank'
+          'target': '_blank',
+          'class': 'channelOption'
         }).text('Select Variable');
 
         $li = $('<li>').append($a, $aReadable, $aVariable, $rawButton);

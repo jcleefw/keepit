@@ -2,6 +2,7 @@
   <h1>Listing Variable to import</h1>
 
   <div id="variables">
+
     <h5>Variable Listed for <%= @data["title"] %></h5>
 
     <p>Click on box below to add the keys</p>
@@ -17,7 +18,7 @@
     </p>
     <% end %>
 
-    <% if (!@selected.nil?) && (@selected.include? data_key) %>
+    <% if (!@selected.nil?) %>
       <h2>Based on keys above type the following for selected fields </h2>
 
       <p>
@@ -47,7 +48,7 @@
         <label for="">Description Key: </label>
         <select name="description" id="description">
           <option value=""></option>
-          <% if (!@selected.nil?) && (@selected.include? data_key) %>
+          <% if (!@selected.nil?) && (@selected.include? data_key)%>
             <% @selected.each do |data_key| %>
               <option value="<%= data_key %>" <% if data_key == @description %> selected="selected"<% end %> ><%= data_key %></option>
             <% end %>
@@ -55,9 +56,8 @@
         </select>
       </p>
     <% end %>
-    <button id="submit">Submit</button>
-
   </div>
+  <button id="submit">Submit</button>
 </div>
 
 <script>
