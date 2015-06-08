@@ -72,7 +72,7 @@
                   '</div>'+
                 '</div>', // Popup HTML markup. `.mfp-img` div will be replaced with img tag, `.mfp-close` by close button
 
-        cursor: 'mfp-zoom-out-cur', // Class that adds zoom cursor, will be added to body. Set to null to disable zoom out cursor.
+        //cursor: 'mfp-zoom-out-cur', // Class that adds zoom cursor, will be added to body. Set to null to disable zoom out cursor.
 
         titleSrc: 'title', // Attribute of the target element that contains caption for the slide.
         // Or the function that should return the title. For example:
@@ -84,10 +84,11 @@
       },
       callbacks: {
         open: function() {
-          // function timer() {
-          //   $('button.mfp-arrow-right').trigger('click');
-          //   // intervalID = window.setInterval(hello, 400*15);
-          // }
+          function timer() {
+            $('button.mfp-arrow-right').trigger('click');
+            // $.magnificPopup.proto.next.call(self);
+            // intervalID = window.setInterval(hello, 400*15);
+          }
           intervalID = window.setInterval(timer, 400*15);
 
           // $.magnificPopup.instance.next = function () {
@@ -97,18 +98,18 @@
           //   setTimeout(function () {
           //       $.magnificPopup.proto.next.call(self);
           //   }, 50);
-          //   var effectNext = "fadeIn";
-          //   var animateOptions = {
-          //       delay: 100,
-          //       duration: !/\./.test(effectNext) ? 500 : null
-          //   };
-          //   if (effectNext === "fadeIn" || /In$/.test(effectNext)) {
-          //       this.content.velocity({
-          //           opacity: 0
-          //       }, 100);
-          //   }
+            // var effectNext = "fadeIn";
+            // var animateOptions = {
+            //     delay: 100,
+            //     duration: !/\./.test(effectNext) ? 500 : null
+            // };
+            // if (effectNext === "fadeIn" || /In$/.test(effectNext)) {
+            //     this.content.velocity({
+            //         opacity: 0
+            //     }, 100);
+            // }
 
-          //   this.content.velocity(effectNext, animateOptions);
+            // this.content.velocity(effectNext, animateOptions);
 
           // };
 

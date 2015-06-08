@@ -1486,15 +1486,19 @@ button.mfp-close, button.mfp-arrow {
   z-index: 1046;
   -webkit-box-shadow: none;
   box-shadow: none;
+  color: black;
+  text-shadow: black 1px 1px 10px;
+  font-size: 3em;
+  padding: 0 10px;
 }
 
-/* line 121, sass/_magnific-popup.scss */
+/* line 126, sass/_magnific-popup.scss */
 button::-moz-focus-inner {
   padding: 0;
   border: 0;
 }
 
-/* line 125, sass/_magnific-popup.scss */
+/* line 130, sass/_magnific-popup.scss */
 .mfp-close {
   width: 44px;
   height: 44px;
@@ -1513,32 +1517,30 @@ button::-moz-focus-inner {
   font-family: Arial, Baskerville, monospace;
 }
 
-/* line 141, sass/_magnific-popup.scss */
+/* line 146, sass/_magnific-popup.scss */
 .mfp-close:hover, .mfp-close:focus {
   opacity: 1;
   filter: alpha(opacity=100);
 }
 
-/* line 144, sass/_magnific-popup.scss */
+/* line 149, sass/_magnific-popup.scss */
 .mfp-close:active {
   top: 1px;
 }
 
-/* line 147, sass/_magnific-popup.scss */
+/* line 152, sass/_magnific-popup.scss */
 .mfp-close-btn-in .mfp-close {
   color: #333;
 }
 
-/* line 150, sass/_magnific-popup.scss */
+/* line 155, sass/_magnific-popup.scss */
 .mfp-image-holder .mfp-close, .mfp-iframe-holder .mfp-close {
   color: #FFF;
-  right: -6px;
   text-align: right;
-  padding-right: 6px;
   width: 100%;
 }
 
-/* line 157, sass/_magnific-popup.scss */
+/* line 162, sass/_magnific-popup.scss */
 .mfp-counter {
   position: absolute;
   top: 0;
@@ -1549,7 +1551,7 @@ button::-moz-focus-inner {
   white-space: nowrap;
 }
 
-/* line 166, sass/_magnific-popup.scss */
+/* line 171, sass/_magnific-popup.scss */
 .mfp-arrow {
   position: absolute;
   opacity: 0.65;
@@ -1563,18 +1565,18 @@ button::-moz-focus-inner {
   -webkit-tap-highlight-color: transparent;
 }
 
-/* line 177, sass/_magnific-popup.scss */
+/* line 182, sass/_magnific-popup.scss */
 .mfp-arrow:active {
   margin-top: -54px;
 }
 
-/* line 179, sass/_magnific-popup.scss */
+/* line 184, sass/_magnific-popup.scss */
 .mfp-arrow:hover, .mfp-arrow:focus {
   opacity: 1;
   filter: alpha(opacity=100);
 }
 
-/* line 182, sass/_magnific-popup.scss */
+/* line 187, sass/_magnific-popup.scss */
 .mfp-arrow:before, .mfp-arrow:after, .mfp-arrow .mfp-b, .mfp-arrow .mfp-a {
   content: '';
   display: block;
@@ -1588,72 +1590,72 @@ button::-moz-focus-inner {
   border: medium inset transparent;
 }
 
-/* line 193, sass/_magnific-popup.scss */
+/* line 198, sass/_magnific-popup.scss */
 .mfp-arrow:after, .mfp-arrow .mfp-a {
   border-top-width: 13px;
   border-bottom-width: 13px;
   top: 8px;
 }
 
-/* line 197, sass/_magnific-popup.scss */
+/* line 202, sass/_magnific-popup.scss */
 .mfp-arrow:before, .mfp-arrow .mfp-b {
   border-top-width: 21px;
   border-bottom-width: 21px;
   opacity: 0.7;
 }
 
-/* line 202, sass/_magnific-popup.scss */
+/* line 207, sass/_magnific-popup.scss */
 .mfp-arrow-left {
   left: 0;
 }
 
-/* line 204, sass/_magnific-popup.scss */
+/* line 209, sass/_magnific-popup.scss */
 .mfp-arrow-left:after, .mfp-arrow-left .mfp-a {
   border-right: 17px solid #FFF;
   margin-left: 31px;
 }
 
-/* line 207, sass/_magnific-popup.scss */
+/* line 212, sass/_magnific-popup.scss */
 .mfp-arrow-left:before, .mfp-arrow-left .mfp-b {
   margin-left: 25px;
   border-right: 27px solid #3F3F3F;
 }
 
-/* line 211, sass/_magnific-popup.scss */
+/* line 216, sass/_magnific-popup.scss */
 .mfp-arrow-right {
   right: 0;
 }
 
-/* line 213, sass/_magnific-popup.scss */
+/* line 218, sass/_magnific-popup.scss */
 .mfp-arrow-right:after, .mfp-arrow-right .mfp-a {
   border-left: 17px solid #FFF;
   margin-left: 39px;
 }
 
-/* line 216, sass/_magnific-popup.scss */
+/* line 221, sass/_magnific-popup.scss */
 .mfp-arrow-right:before, .mfp-arrow-right .mfp-b {
   border-left: 27px solid #3F3F3F;
 }
 
-/* line 219, sass/_magnific-popup.scss */
+/* line 224, sass/_magnific-popup.scss */
 .mfp-iframe-holder {
   padding-top: 40px;
   padding-bottom: 40px;
 }
 
-/* line 222, sass/_magnific-popup.scss */
+/* line 227, sass/_magnific-popup.scss */
 .mfp-iframe-holder .mfp-content {
   line-height: 0;
   width: 100%;
   max-width: 900px;
 }
 
-/* line 226, sass/_magnific-popup.scss */
+/* line 231, sass/_magnific-popup.scss */
 .mfp-iframe-holder .mfp-close {
   top: -40px;
 }
 
-/* line 229, sass/_magnific-popup.scss */
+/* line 234, sass/_magnific-popup.scss */
 .mfp-iframe-scaler {
   width: 100%;
   height: 0;
@@ -1661,7 +1663,7 @@ button::-moz-focus-inner {
   padding-top: 56.25%;
 }
 
-/* line 234, sass/_magnific-popup.scss */
+/* line 239, sass/_magnific-popup.scss */
 .mfp-iframe-scaler iframe {
   position: absolute;
   display: block;
@@ -1674,7 +1676,7 @@ button::-moz-focus-inner {
 }
 
 /* Main image in popup */
-/* line 245, sass/_magnific-popup.scss */
+/* line 250, sass/_magnific-popup.scss */
 img.mfp-img {
   /* Added by JC */
   width: 100%;
@@ -1689,12 +1691,12 @@ img.mfp-img {
 }
 
 /* The shadow behind the image */
-/* line 261, sass/_magnific-popup.scss */
+/* line 266, sass/_magnific-popup.scss */
 .mfp-figure {
   line-height: 0;
 }
 
-/* line 263, sass/_magnific-popup.scss */
+/* line 268, sass/_magnific-popup.scss */
 .mfp-figure:after {
   content: '';
   position: absolute;
@@ -1710,7 +1712,7 @@ img.mfp-img {
   background: #444;
 }
 
-/* line 276, sass/_magnific-popup.scss */
+/* line 281, sass/_magnific-popup.scss */
 .mfp-figure small {
   color: #BDBDBD;
   display: block;
@@ -1718,12 +1720,12 @@ img.mfp-img {
   line-height: 14px;
 }
 
-/* line 281, sass/_magnific-popup.scss */
+/* line 286, sass/_magnific-popup.scss */
 .mfp-figure figure {
   margin: 0;
 }
 
-/* line 284, sass/_magnific-popup.scss */
+/* line 289, sass/_magnific-popup.scss */
 .mfp-bottom-bar {
   margin-top: -150px;
   position: absolute;
@@ -1735,7 +1737,7 @@ img.mfp-img {
   padding: 20px;
 }
 
-/* line 297, sass/_magnific-popup.scss */
+/* line 302, sass/_magnific-popup.scss */
 .mfp-title {
   text-align: left;
   line-height: 1.3em;
@@ -1747,7 +1749,7 @@ img.mfp-img {
   margin-bottom: 5px;
 }
 
-/* line 308, sass/_magnific-popup.scss */
+/* line 313, sass/_magnific-popup.scss */
 .mfp-desc {
   color: #F3F3F3;
   text-align: left;
@@ -1755,14 +1757,14 @@ img.mfp-img {
   line-height: 1.5em;
 }
 
-/* line 316, sass/_magnific-popup.scss */
+/* line 321, sass/_magnific-popup.scss */
 .mfp-image-holder .mfp-content {
   max-width: 100%;
   /* Added by JC */
   width: 100%;
 }
 
-/* line 322, sass/_magnific-popup.scss */
+/* line 327, sass/_magnific-popup.scss */
 .mfp-gallery .mfp-image-holder .mfp-figure {
   cursor: pointer;
 }
@@ -1772,30 +1774,30 @@ img.mfp-img {
   /**
        * Remove all paddings around the image on small screen
        */
-  /* line 332, sass/_magnific-popup.scss */
+  /* line 337, sass/_magnific-popup.scss */
   .mfp-img-mobile .mfp-image-holder {
     padding-left: 0;
     padding-right: 0;
   }
 
-  /* line 335, sass/_magnific-popup.scss */
+  /* line 340, sass/_magnific-popup.scss */
   .mfp-img-mobile img.mfp-img {
     padding: 0;
   }
 
-  /* line 337, sass/_magnific-popup.scss */
+  /* line 342, sass/_magnific-popup.scss */
   .mfp-img-mobile .mfp-figure:after {
     top: 0;
     bottom: 0;
   }
 
-  /* line 340, sass/_magnific-popup.scss */
+  /* line 345, sass/_magnific-popup.scss */
   .mfp-img-mobile .mfp-figure small {
     display: inline;
     margin-left: 5px;
   }
 
-  /* line 343, sass/_magnific-popup.scss */
+  /* line 348, sass/_magnific-popup.scss */
   .mfp-img-mobile .mfp-bottom-bar {
     background: rgba(0, 0, 0, 0.6);
     bottom: 0;
@@ -1808,18 +1810,18 @@ img.mfp-img {
     box-sizing: border-box;
   }
 
-  /* line 353, sass/_magnific-popup.scss */
+  /* line 358, sass/_magnific-popup.scss */
   .mfp-img-mobile .mfp-bottom-bar:empty {
     padding: 0;
   }
 
-  /* line 355, sass/_magnific-popup.scss */
+  /* line 360, sass/_magnific-popup.scss */
   .mfp-img-mobile .mfp-counter {
     right: 5px;
     top: 3px;
   }
 
-  /* line 358, sass/_magnific-popup.scss */
+  /* line 363, sass/_magnific-popup.scss */
   .mfp-img-mobile .mfp-close {
     top: 0;
     right: 0;
@@ -1833,36 +1835,36 @@ img.mfp-img {
   }
 }
 @media all and (max-width: 900px) {
-  /* line 371, sass/_magnific-popup.scss */
+  /* line 376, sass/_magnific-popup.scss */
   .mfp-arrow {
     -webkit-transform: scale(0.75);
     transform: scale(0.75);
   }
 
-  /* line 375, sass/_magnific-popup.scss */
+  /* line 380, sass/_magnific-popup.scss */
   .mfp-arrow-left {
     -webkit-transform-origin: 0;
     transform-origin: 0;
   }
 
-  /* line 379, sass/_magnific-popup.scss */
+  /* line 384, sass/_magnific-popup.scss */
   .mfp-arrow-right {
     -webkit-transform-origin: 100%;
     transform-origin: 100%;
   }
 
-  /* line 383, sass/_magnific-popup.scss */
+  /* line 388, sass/_magnific-popup.scss */
   .mfp-container {
     padding-left: 6px;
     padding-right: 6px;
   }
 }
-/* line 388, sass/_magnific-popup.scss */
+/* line 393, sass/_magnific-popup.scss */
 .mfp-ie7 .mfp-img {
   padding: 0;
 }
 
-/* line 390, sass/_magnific-popup.scss */
+/* line 395, sass/_magnific-popup.scss */
 .mfp-ie7 .mfp-bottom-bar {
   width: 600px;
   left: 50%;
@@ -1871,17 +1873,17 @@ img.mfp-img {
   padding-bottom: 5px;
 }
 
-/* line 396, sass/_magnific-popup.scss */
+/* line 401, sass/_magnific-popup.scss */
 .mfp-ie7 .mfp-container {
   padding: 0;
 }
 
-/* line 398, sass/_magnific-popup.scss */
+/* line 403, sass/_magnific-popup.scss */
 .mfp-ie7 .mfp-content {
   padding-top: 44px;
 }
 
-/* line 400, sass/_magnific-popup.scss */
+/* line 405, sass/_magnific-popup.scss */
 .mfp-ie7 .mfp-close {
   top: 0;
   right: 0;
