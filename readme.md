@@ -29,6 +29,11 @@ KeepIt is a feed subscription platform that displays daily topics that users are
 1. Create Slideshow
 2. Style slideshow for mobile
 3. Create animation for slideshow
+4. Deploy app in Heroku
+5. Debugging animation for slideshow
+
+## 08/06/2015
+1. Style button for slideshow
 
 ## Extras
 2. Create App Logo with Illustrator

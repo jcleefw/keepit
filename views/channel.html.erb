@@ -1,6 +1,6 @@
 <div class="content ">
   <h1><%= @channel.channel_name%></h1>
-  <button class="slideshow">Open Slideshow</button>
+  <button class="slideshow">Slideshow mode</button>
 
 <div class="channelList">
 
@@ -21,9 +21,22 @@
 
 
 <script>
+
+  function timer() {
+    $('button.mfp-arrow-right').trigger('click');
+    // intervalID = window.setInterval(hello, 400*15);
+  }
+
+
   imgArray = [];
 
   $(document).ready(function() {
+
+    // $('.mfp-arrow-right').on('click', function() {
+    //   console.log('button was click');
+    //   window.clearInterval(intervalID);
+    //   intervalID = window.setInterval(timer, 400*15);
+    // });
     $('redirect').on('click', function() {
       href = $(this).attr('href');
       window.location.href = href;
@@ -71,34 +84,33 @@
       },
       callbacks: {
         open: function() {
-          function timer() {
-            // $('.mvp-content').ready(function() {
-            //   console.log('hello');
-            // });
-            $('button.mfp-arrow-right').trigger('click');
-            // intervalID = window.setInterval(hello, 400*15);
-          }
+          // function timer() {
+          //   $('button.mfp-arrow-right').trigger('click');
+          //   // intervalID = window.setInterval(hello, 400*15);
+          // }
           intervalID = window.setInterval(timer, 400*15);
 
-          $.magnificPopup.instance.next = function () {
-            var self = this;
-            setTimeout(function () {
-                $.magnificPopup.proto.next.call(self);
-            }, 50);
-            var effectNext = "fadeIn";
-            var animateOptions = {
-                delay: 200,
-                duration: !/\./.test(effectNext) ? 500 : null
-            };
-            if (effectNext === "fadeIn" || /In$/.test(effectNext)) {
-                this.content.velocity({
-                    opacity: 0
-                }, 100);
-            }
+          // $.magnificPopup.instance.next = function () {
+          //   var self = this;
+          //   $content = $(this).find('.mfp-content');
+          //   console.log($(this).find('.mfp-content'));
+          //   setTimeout(function () {
+          //       $.magnificPopup.proto.next.call(self);
+          //   }, 50);
+          //   var effectNext = "fadeIn";
+          //   var animateOptions = {
+          //       delay: 100,
+          //       duration: !/\./.test(effectNext) ? 500 : null
+          //   };
+          //   if (effectNext === "fadeIn" || /In$/.test(effectNext)) {
+          //       this.content.velocity({
+          //           opacity: 0
+          //       }, 100);
+          //   }
 
-            this.content.velocity(effectNext, animateOptions);
+          //   this.content.velocity(effectNext, animateOptions);
 
-          };
+          // };
 
         },
         close: function() {
@@ -137,5 +149,7 @@
 
     $(this).empty().append($p).append($img, $figure);
   });
+
+
 </script>
 
