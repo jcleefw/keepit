@@ -105,8 +105,5 @@ def time_to_import? current_time, previous_time, duration
   end
 end
 
-def hello
-  "hello world blah blah blah"
-end
 
 

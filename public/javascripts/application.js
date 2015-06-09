@@ -11,14 +11,16 @@ var generate_channel_list = function() {
 
     list = data;
     $.each(data, function (key, value) {
-
+      console.log('listing each channel');
+      $.get('/api/channel/'+value.id, function() {
+        console.log('Load get was performed');
+      });
       if(value.channel_url !== null) {
         if(value.imported == true) {
           $rawButton = $('<button>').attr({'data-channel-id': value.id, 'disabled': 'disabled'}).addClass('btnProcess').text('Done');
         } else {
           $rawButton = $('<button>').attr('data-channel-id', value.id).addClass('raw').text('Get Today\'s Feeds');
         }
-
 
         $a = $('<a>').attr({
           'name': value.id,

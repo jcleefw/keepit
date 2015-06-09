@@ -12,11 +12,11 @@
 <script>
   $(document).ready(function() {
     generate_channel_list();
-    console.log(<%= @imported %>)
+
     $('ul.channels').on('click', 'button.raw', function() {
       $(this).prop('disabled', true).html('Processing...').addClass('btnProcess')
       id = $(this).data('channel-id');
-      //console.log('/api/'+id+'/posts');
+
       $.ajax({
         url: '/api/'+id+'/get_feed',
         method: 'post',

@@ -85,33 +85,19 @@
       callbacks: {
         open: function() {
           function timer() {
+            console.log("before clear: "+ intervalID);
+            window.clearInterval(intervalID);
             $('button.mfp-arrow-right').trigger('click');
-            // $.magnificPopup.proto.next.call(self);
-            // intervalID = window.setInterval(hello, 400*15);
+            intervalID = window.setInterval(timer, 400*15);
+            console.log("before clear: "+ intervalID);
           }
           intervalID = window.setInterval(timer, 400*15);
 
-          // $.magnificPopup.instance.next = function () {
-          //   var self = this;
-          //   $content = $(this).find('.mfp-content');
-          //   console.log($(this).find('.mfp-content'));
-          //   setTimeout(function () {
-          //       $.magnificPopup.proto.next.call(self);
-          //   }, 50);
-            // var effectNext = "fadeIn";
-            // var animateOptions = {
-            //     delay: 100,
-            //     duration: !/\./.test(effectNext) ? 500 : null
-            // };
-            // if (effectNext === "fadeIn" || /In$/.test(effectNext)) {
-            //     this.content.velocity({
-            //         opacity: 0
-            //     }, 100);
-            // }
+          $.magnificPopup.instance.next = function () {
 
-            // this.content.velocity(effectNext, animateOptions);
+            $.magnificPopup.proto.next.call(self);
 
-          // };
+          };
 
         },
         close: function() {
