@@ -13,7 +13,6 @@
 <script>
 
 $(document).ready(function (){
-  console.log("<%= hello  %>");
   var build_feed = function (value) {
     $a = $('<a>').attr('href', '/explore/'+value.id+'/list');
     if(value.channel_image !== null && value.channel_image !== "") {
